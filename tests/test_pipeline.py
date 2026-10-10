@@ -55,6 +55,10 @@ class PipelineTests(unittest.TestCase):
         run=ingest(self.db,source)
         self.assertEqual(run['rejected'],4)
         self.assertGreaterEqual(facts(self.db)[0]['DelayMinutes'],0)
+    def test_non_string_timestamp_is_quarantined_not_a_partial_failure(self):
+        source=copy.deepcopy(self.source);row=copy.deepcopy(source['arrivals'][2]);row.update(key='null-time',actual=None)
+        source['arrivals'].append(row);run=ingest(self.db,source)
+        self.assertEqual(run['status'],'succeeded');self.assertEqual(run['rejected'],5)
 
 class AnalysisTests(unittest.TestCase):
     def test_simulated_pilot_is_balanced_and_effect_has_expected_sign(self):

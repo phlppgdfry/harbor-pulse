@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "pages": 12,
+  "report_elements": 132,
+  "dax_measures": 56,
+  "server_definition_files_matched": 145,
+  "model_binding_verified": true,
+  "folder_placement_verified": true,
+  "browser_used": false
+}

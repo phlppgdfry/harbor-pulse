@@ -113,6 +113,7 @@ It does **not** claim a real operational deployment, actual cost savings, valida
 ```text
 harbor_pulse/  source generation, audited pipeline, analyses and CLI
 scripts/      report builder, schemas, publication and verification
+powerbi/      generated model and inspectable PBIR source; cloud binding removed
 tests/        failure, correction, coverage and estimator checks
 contracts/    source ownership and revision rules
 evidence/     reproducible summaries; no private account receipts

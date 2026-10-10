@@ -11,6 +11,8 @@ def canonical(record):
     return json.dumps(record, sort_keys=True, separators=(',', ':'))
 
 def timestamp(value):
+    if not isinstance(value,str):
+        raise ValueError('invalid_timestamp_type')
     result = dt.datetime.fromisoformat(value.replace('Z', '+00:00'))
     if result.tzinfo is None:
         raise ValueError('timezone_required')
