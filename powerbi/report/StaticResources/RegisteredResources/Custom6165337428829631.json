@@ -1,0 +1,24 @@
+{
+  "name": "Harbor Pulse · Maritime Intelligence",
+  "dataColors": [
+    "#007F86",
+    "#5064A0",
+    "#E99A38",
+    "#6E9A83",
+    "#A66384",
+    "#102A43"
+  ],
+  "foreground": "#243B53",
+  "background": "#FFFFFF",
+  "foregroundNeutralSecondary": "#6C6966",
+  "backgroundLight": "#E5E0DA",
+  "foregroundNeutralTertiary": "#ABA7A2",
+  "backgroundNeutral": "#C6C2BE",
+  "tableAccent": "#007F86",
+  "good": "#46835A",
+  "neutral": "#186DD5",
+  "bad": "#0F3D6E",
+  "minimum": "#0E94FF",
+  "center": "#59A472",
+  "maximum": "#0B2F54"
+}

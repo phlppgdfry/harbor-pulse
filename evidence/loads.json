@@ -1,0 +1,50 @@
+[
+  {
+    "run": 1,
+    "status": "succeeded",
+    "inserted": 28403,
+    "updated": 0,
+    "duplicates": 216,
+    "stale": 0,
+    "rejected": 4,
+    "input_rows": 28623,
+    "source_vehicles": 366838,
+    "fact_vehicles": 366838,
+    "difference": 0,
+    "missing_departures": 67,
+    "invalid_departures": 0,
+    "fact_rows": 1095
+  },
+  {
+    "run": 2,
+    "status": "succeeded",
+    "inserted": 0,
+    "updated": 0,
+    "duplicates": 28619,
+    "stale": 0,
+    "rejected": 4,
+    "input_rows": 28623,
+    "source_vehicles": 366838,
+    "fact_vehicles": 366838,
+    "difference": 0,
+    "missing_departures": 67,
+    "invalid_departures": 0,
+    "fact_rows": 1095
+  },
+  {
+    "run": 3,
+    "status": "succeeded",
+    "inserted": 0,
+    "updated": 36,
+    "duplicates": 28619,
+    "stale": 0,
+    "rejected": 4,
+    "input_rows": 28659,
+    "source_vehicles": 366910,
+    "fact_vehicles": 366910,
+    "difference": 0,
+    "missing_departures": 67,
+    "invalid_departures": 0,
+    "fact_rows": 1095
+  }
+]

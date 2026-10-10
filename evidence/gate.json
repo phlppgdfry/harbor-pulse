@@ -1,0 +1,12 @@
+{
+  "status": "pass_with_warnings",
+  "checks": {
+    "reconciled": true,
+    "departure_coverage": true,
+    "reject_rate": true
+  },
+  "departure_coverage": 0.994818892916519,
+  "reject_rate": 0.0001395722111727555,
+  "minimum_coverage": 0.99,
+  "maximum_reject_rate": 0.001
+}

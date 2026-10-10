@@ -1,0 +1,41 @@
+{
+  "synthetic": true,
+  "design": "Day-blocked randomized lane-day demonstration; 14 baseline days + 28 intervention days",
+  "known_generated_effect_minutes": -6,
+  "observed_did_minutes": -7.0550000000000015,
+  "paired_day_bootstrap_95": [
+    -8.260053571428571,
+    -5.882116071428571
+  ],
+  "summary": [
+    {
+      "Groep": "Interventie",
+      "Periode": "Voor",
+      "Sessies": 14,
+      "GemiddeldeVertraging": 20.127142857142857
+    },
+    {
+      "Groep": "Interventie",
+      "Periode": "Na",
+      "Sessies": 28,
+      "GemiddeldeVertraging": 12.935714285714285
+    },
+    {
+      "Groep": "Controle",
+      "Periode": "Voor",
+      "Sessies": 14,
+      "GemiddeldeVertraging": 19.72357142857143
+    },
+    {
+      "Groep": "Controle",
+      "Periode": "Na",
+      "Sessies": 28,
+      "GemiddeldeVertraging": 19.587142857142858
+    }
+  ],
+  "limitations": [
+    "This is a simulated experiment, not evidence of an actual business effect.",
+    "Assumes no cross-lane spillover.",
+    "A real pilot needs pre-registration, agreed minimum effect and operational guardrails."
+  ]
+}

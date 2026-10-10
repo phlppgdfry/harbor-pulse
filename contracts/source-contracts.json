@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "timezone": "UTC",
+  "sources": {
+    "arrivals": {
+      "grain": "transport batch",
+      "key": [
+        "key"
+      ],
+      "revision": "version",
+      "owner": "Transport operations lead",
+      "required": [
+        "DateKey",
+        "TerminalKey",
+        "Units",
+        "OnTimeUnits",
+        "planned",
+        "actual",
+        "updated_at"
+      ]
+    },
+    "departures": {
+      "grain": "transport batch departure",
+      "key": [
+        "key"
+      ],
+      "revision": "version",
+      "owner": "Terminal operations lead",
+      "required": [
+        "DateKey",
+        "TerminalKey",
+        "departure",
+        "updated_at"
+      ]
+    },
+    "capacity": {
+      "grain": "terminal-day",
+      "key": [
+        "DateKey",
+        "TerminalKey"
+      ],
+      "revision": "version",
+      "owner": "Capacity planner"
+    },
+    "staffing": {
+      "grain": "terminal-day",
+      "key": [
+        "DateKey",
+        "TerminalKey"
+      ],
+      "revision": "version",
+      "owner": "Workforce planner"
+    }
+  },
+  "rules": {
+    "duplicates": "same key/version/hash = no-op",
+    "conflicts": "same key/version, different hash = quarantine",
+    "correction": "higher version replaces current row; audit old/new hashes",
+    "watermark": "monitoring evidence; file adapter re-scans to retain backdated corrections",
+    "retention": "no automatic purge in this case"
+  }
+}

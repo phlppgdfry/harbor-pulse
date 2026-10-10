@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "distinct_report_queries": 66,
+  "vehicles": 366910,
+  "revenue": 11090750,
+  "departure_coverage": 0.994818892916519,
+  "source_fact_difference": 0,
+  "scenario_uses_realizable_fraction": true,
+  "browser_used": false
+}

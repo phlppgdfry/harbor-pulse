@@ -1,0 +1,41 @@
+{
+  "method": "OLS descriptive association; terminal fixed effects; no causal interpretation",
+  "observations": 1095,
+  "r_squared": 0.6137665919048176,
+  "coefficients": [
+    {
+      "Factor": "Intercept",
+      "DelayAssociationMinutes": 21.019
+    },
+    {
+      "Factor": "Onderhoudsincident",
+      "DelayAssociationMinutes": 31.946
+    },
+    {
+      "Factor": "Volume/capaciteit",
+      "DelayAssociationMinutes": -4.789
+    },
+    {
+      "Factor": "Maandag",
+      "DelayAssociationMinutes": 4.57
+    },
+    {
+      "Factor": "Personeelsuren per 100 voertuigen",
+      "DelayAssociationMinutes": -0.254
+    },
+    {
+      "Factor": "Antwerpen",
+      "DelayAssociationMinutes": 0.247
+    },
+    {
+      "Factor": "Gent",
+      "DelayAssociationMinutes": 1.1
+    }
+  ],
+  "limitations": [
+    "Synthetic data encodes the incident mechanism.",
+    "Staffing is correlated with planned volume.",
+    "No causal identification; no out-of-sample production validation.",
+    "Coefficient units differ; magnitudes are not feature importance."
+  ]
+}

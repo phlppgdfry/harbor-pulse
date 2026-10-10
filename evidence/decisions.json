@@ -1,0 +1,61 @@
+{
+  "draws": 2000,
+  "scope": "Full-year 2026, all terminals; annual benefit excluding one-off implementation cost",
+  "interpretation": "Assumption-based Monte Carlo distribution; P10/P90 are not statistical confidence bounds",
+  "options": [
+    {
+      "Optie": "Dispatch en afspraakslots",
+      "ImplementatieEUR": 35000,
+      "JaarlijkseOpexEUR": 45000,
+      "TijdwinstLaagMin": 5,
+      "TijdwinstHoogMin": 8,
+      "BenutbaarLaag": 0.05,
+      "BenutbaarHoog": 0.15,
+      "BrutoP50": 162559,
+      "NettoP10": 64321,
+      "NettoP50": 117559,
+      "NettoP90": 184059,
+      "KansPositief": 1.0,
+      "TerugverdientijdMaanden": 3.6,
+      "PaybackCondition": "Median among positive annual net-benefit draws only"
+    },
+    {
+      "Optie": "Extra yardruimte +15%",
+      "ImplementatieEUR": 90000,
+      "JaarlijkseOpexEUR": 12000,
+      "TijdwinstLaagMin": 0,
+      "TijdwinstHoogMin": 2,
+      "BenutbaarLaag": 0.03,
+      "BenutbaarHoog": 0.08,
+      "BrutoP50": 11363,
+      "NettoP10": -7228,
+      "NettoP50": -637,
+      "NettoP90": 10613,
+      "KansPositief": 0.4635,
+      "TerugverdientijdMaanden": 210.4,
+      "PaybackCondition": "Median among positive annual net-benefit draws only"
+    },
+    {
+      "Optie": "Extra inzet personeel",
+      "ImplementatieEUR": 8000,
+      "JaarlijkseOpexEUR": 131400,
+      "TijdwinstLaagMin": 3,
+      "TijdwinstHoogMin": 6,
+      "BenutbaarLaag": 0.08,
+      "BenutbaarHoog": 0.18,
+      "BrutoP50": 145763,
+      "NettoP10": -28596,
+      "NettoP50": 14363,
+      "NettoP90": 72655,
+      "KansPositief": 0.6545,
+      "TerugverdientijdMaanden": 2.9,
+      "PaybackCondition": "Median among positive annual net-benefit draws only"
+    }
+  ],
+  "limitations": [
+    "Savings require real resource redeployment; waiting hours are not automatically payroll savings.",
+    "Parameter ranges are invented and independent.",
+    "Investment must be deducted separately for year-one cash flow.",
+    "No claimed improvement in throughput or on-time rate."
+  ]
+}

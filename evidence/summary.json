@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "fact_rows": 1095,
+  "vehicles": 366910,
+  "revenue": 11090750,
+  "source_fact_difference": 0,
+  "missing_departure_units": 1901,
+  "replay_new_events": 0,
+  "late_corrections": 36,
+  "quarantined_initial": 4,
+  "pipeline_status": "passed",
+  "pilot_did_minutes": -7.0550000000000015,
+  "recommended_next_step": "Pilot dispatch/appointment slots; do not claim realized savings"
+}

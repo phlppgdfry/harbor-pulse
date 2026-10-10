@@ -1,0 +1,692 @@
+{
+  "name": "Harbor Pulse — Governed Operations 2026",
+  "defaultMode": "Push",
+  "tables": [
+    {
+      "name": "DimDate",
+      "columns": [
+        {
+          "name": "DateKey",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Datum",
+          "dataType": "DateTime"
+        },
+        {
+          "name": "Maand",
+          "dataType": "string"
+        },
+        {
+          "name": "Maandnummer",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Week",
+          "dataType": "string"
+        },
+        {
+          "name": "Weekdag",
+          "dataType": "string",
+          "sortByColumn": "Weekdagnummer"
+        },
+        {
+          "name": "Weekdagnummer",
+          "dataType": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "DimTerminal",
+      "columns": [
+        {
+          "name": "TerminalKey",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Terminal",
+          "dataType": "string"
+        },
+        {
+          "name": "Regio",
+          "dataType": "string"
+        },
+        {
+          "name": "DailyCapacity",
+          "dataType": "Int64"
+        },
+        {
+          "name": "YardSlots",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Rate",
+          "dataType": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "FactOps",
+      "columns": [
+        {
+          "name": "DateKey",
+          "dataType": "Int64"
+        },
+        {
+          "name": "TerminalKey",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Vehicles",
+          "dataType": "Int64"
+        },
+        {
+          "name": "PlannedVehicles",
+          "dataType": "Int64"
+        },
+        {
+          "name": "OnTimeVehicles",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Revenue",
+          "dataType": "Int64",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "BudgetRevenue",
+          "dataType": "Int64",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "HandlingCost",
+          "dataType": "Int64",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "DelayMinutes",
+          "dataType": "Double"
+        },
+        {
+          "name": "DwellHours",
+          "dataType": "Double"
+        },
+        {
+          "name": "AvailableSlots",
+          "dataType": "Int64"
+        },
+        {
+          "name": "OccupiedSlots",
+          "dataType": "Int64"
+        },
+        {
+          "name": "HandlingCapacity",
+          "dataType": "Int64"
+        },
+        {
+          "name": "IncidentFlag",
+          "dataType": "bool"
+        },
+        {
+          "name": "Incident",
+          "dataType": "string"
+        },
+        {
+          "name": "CO2Kg",
+          "dataType": "Double"
+        },
+        {
+          "name": "CompleteDepartureUnits",
+          "dataType": "Int64"
+        },
+        {
+          "name": "MissingDepartureUnits",
+          "dataType": "Int64"
+        },
+        {
+          "name": "PlannedStaffHours",
+          "dataType": "Double"
+        },
+        {
+          "name": "StaffHours",
+          "dataType": "Double"
+        }
+      ],
+      "measures": [
+        {
+          "name": "Voertuigen",
+          "expression": "SUM(FactOps[Vehicles])",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Planning",
+          "expression": "SUM(FactOps[PlannedVehicles])",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Volumeverschil",
+          "expression": "[Voertuigen]-[Planning]",
+          "formatString": "+#,0;-#,0;0"
+        },
+        {
+          "name": "Volume vs planning",
+          "expression": "DIVIDE([Volumeverschil],[Planning])",
+          "formatString": "+0.0%;-0.0%;0.0%"
+        },
+        {
+          "name": "Omzet",
+          "expression": "SUM(FactOps[Revenue])",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Omzetbudget",
+          "expression": "SUM(FactOps[BudgetRevenue])",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Kosten",
+          "expression": "SUM(FactOps[HandlingCost])",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Brutomarge",
+          "expression": "[Omzet]-[Kosten]",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Marge %",
+          "expression": "DIVIDE([Brutomarge],[Omzet])",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Omzet vs budget",
+          "expression": "DIVIDE([Omzet]-[Omzetbudget],[Omzetbudget])",
+          "formatString": "+0.0%;-0.0%;0.0%"
+        },
+        {
+          "name": "Op tijd %",
+          "expression": "DIVIDE(SUM(FactOps[OnTimeVehicles]),[Voertuigen])",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Doel op tijd",
+          "expression": "IF([Voertuigen]>0,0.97)",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Doel marge",
+          "expression": "IF([Voertuigen]>0,0.35)",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Punctualiteit afwijking",
+          "expression": "([Op tijd %]-[Doel op tijd])*100",
+          "formatString": "+0.0 pp;-0.0 pp;0.0 pp"
+        },
+        {
+          "name": "Vertraging min",
+          "expression": "DIVIDE(SUMX(FactOps,FactOps[DelayMinutes]*FactOps[Vehicles]),[Voertuigen])",
+          "formatString": "0.0"
+        },
+        {
+          "name": "Verblijftijd uur",
+          "expression": "DIVIDE(SUMX(FactOps,FactOps[DwellHours]*FactOps[CompleteDepartureUnits]),SUM(FactOps[CompleteDepartureUnits]))",
+          "formatString": "0.0"
+        },
+        {
+          "name": "Bezetting %",
+          "expression": "DIVIDE(SUM(FactOps[OccupiedSlots]),SUM(FactOps[AvailableSlots]))",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Doel bezetting",
+          "expression": "IF([Voertuigen]>0,0.85)",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Omzet per voertuig",
+          "expression": "DIVIDE([Omzet],[Voertuigen])",
+          "formatString": "€ 0.00"
+        },
+        {
+          "name": "CO2 kg per voertuig",
+          "expression": "DIVIDE(SUM(FactOps[CO2Kg]),[Voertuigen])",
+          "formatString": "0.00"
+        },
+        {
+          "name": "Terminaldagen",
+          "expression": "COUNTROWS(FactOps)",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Dagen boven bezettingsdoel",
+          "expression": "COUNTROWS(FILTER(FactOps,DIVIDE(FactOps[OccupiedSlots],FactOps[AvailableSlots])>0.85))",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Incidentdagen",
+          "expression": "COUNTROWS(FILTER(FactOps,FactOps[IncidentFlag]=TRUE()))",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Incidentvoertuigen",
+          "expression": "CALCULATE([Voertuigen],FactOps[IncidentFlag]=TRUE())",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Incident volumeverschil",
+          "expression": "CALCULATE([Volumeverschil],FactOps[IncidentFlag]=TRUE())",
+          "formatString": "+#,0;-#,0;0"
+        },
+        {
+          "name": "Incident extra kosten",
+          "expression": "SUMX(FILTER(FactOps,FactOps[IncidentFlag]=TRUE()),FactOps[Revenue]*0.10)",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Vertraging regulier",
+          "expression": "CALCULATE([Vertraging min],FactOps[IncidentFlag]=FALSE())",
+          "formatString": "0.0"
+        },
+        {
+          "name": "Vertraging incident",
+          "expression": "CALCULATE([Vertraging min],FactOps[IncidentFlag]=TRUE())",
+          "formatString": "0.0"
+        },
+        {
+          "name": "Volume per terminaldag",
+          "expression": "DIVIDE([Voertuigen],[Terminaldagen])",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Status punctualiteit",
+          "expression": "IF([Voertuigen]=0,BLANK(),IF([Op tijd %]>=0.97,\"Op doel\",IF([Op tijd %]>=0.95,\"Aandacht\",\"Actie nodig\")))"
+        },
+        {
+          "name": "Status bezetting",
+          "expression": "IF([Voertuigen]=0,BLANK(),IF([Bezetting %]>0.85,\"Actie nodig\",IF([Bezetting %]>0.75,\"Aandacht\",\"Binnen doel\")))"
+        },
+        {
+          "name": "Status marge",
+          "expression": "IF([Voertuigen]=0,BLANK(),IF([Marge %]>=0.35,\"Op doel\",\"Onder doel\"))"
+        },
+        {
+          "name": "Aandachtscore",
+          "expression": "IF([Voertuigen]>0,MAX(0,0.97-[Op tijd %])*100+MAX(0,[Bezetting %]-0.85)*100+MAX(0,-[Volume vs planning])*100+MAX(0,0.35-[Marge %])*100)",
+          "formatString": "0.0"
+        },
+        {
+          "name": "Prioriteit",
+          "expression": "IF([Voertuigen]>0,RANKX(ALLSELECTED(DimTerminal[Terminal]),[Aandachtscore],,DESC,Dense))",
+          "formatString": "0"
+        },
+        {
+          "name": "Verbeterpunt",
+          "expression": "IF([Voertuigen]=0,BLANK(),IF([Op tijd %]<0.95,\"Onderzoek wachtrij en verstoringen\",IF([Bezetting %]>0.85,\"Onderzoek beschikbare yardruimte\",IF([Marge %]<0.35,\"Onderzoek handlingkosten\",\"Volg afwijking versus planning\"))))"
+        },
+        {
+          "name": "Extra capaciteit %",
+          "expression": "SELECTEDVALUE(ScenarioCapacity[Pct],0)",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Minder vertraging min",
+          "expression": "SELECTEDVALUE(ScenarioDelay[Minutes],0)",
+          "formatString": "0"
+        },
+        {
+          "name": "Tarief wachtuur",
+          "expression": "SELECTEDVALUE(ScenarioCost[EUR],45)",
+          "formatString": "€ 0"
+        },
+        {
+          "name": "Scenario bezetting %",
+          "expression": "DIVIDE([Bezetting %],1+[Extra capaciteit %])",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Bespaarde wachturen",
+          "expression": "SUMX(FactOps,FactOps[Vehicles]*MIN(FactOps[DelayMinutes],[Minder vertraging min])/60)",
+          "formatString": "#,0.0"
+        },
+        {
+          "name": "Indicatieve besparing",
+          "expression": "[Bespaarde wachturen]*[Tarief wachtuur]*[Benutbare fractie]",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Scenario vertraging min",
+          "expression": "DIVIDE(SUMX(FactOps,FactOps[Vehicles]*MAX(0,FactOps[DelayMinutes]-[Minder vertraging min])),[Voertuigen])",
+          "formatString": "0.0"
+        },
+        {
+          "name": "Scenario voordeel per voertuig",
+          "expression": "DIVIDE([Indicatieve besparing],[Voertuigen])",
+          "formatString": "€ 0.00"
+        },
+        {
+          "name": "Gekozen terminal",
+          "expression": "SELECTEDVALUE(DimTerminal[Terminal],\"Selecteer één terminal voor detail\")"
+        },
+        {
+          "name": "Vertrekdekking %",
+          "expression": "DIVIDE(SUM(FactOps[CompleteDepartureUnits]),[Voertuigen])",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Personeelsuren",
+          "expression": "SUM(FactOps[StaffHours])",
+          "formatString": "#,0.0"
+        },
+        {
+          "name": "Datakwaliteit meldingen",
+          "expression": "SUM(DQRule[Aantal])",
+          "formatString": "#,0"
+        },
+        {
+          "name": "Bron fact verschil",
+          "expression": "SUMX(FILTER(DQRule,DQRule[Regel]=\"Bron versus fact verschil\"),DQRule[Aantal])",
+          "formatString": "0"
+        },
+        {
+          "name": "Pilot effect min",
+          "expression": "-7.0550000000000015",
+          "formatString": "0.00"
+        },
+        {
+          "name": "Pilot interval laag",
+          "expression": "-8.260053571428571",
+          "formatString": "0.00"
+        },
+        {
+          "name": "Pilot interval hoog",
+          "expression": "-5.882116071428571",
+          "formatString": "0.00"
+        },
+        {
+          "name": "Benutbare fractie",
+          "expression": "SELECTEDVALUE(ScenarioRealization[Fraction],0.10)",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Pilot gemiddelde min",
+          "expression": "DIVIDE(SUMX(PilotSummary,PilotSummary[GemiddeldeVertraging]*PilotSummary[Sessies]),SUM(PilotSummary[Sessies]))",
+          "formatString": "0.00"
+        },
+        {
+          "name": "Netto jaar P10",
+          "expression": "SELECTEDVALUE(DecisionOption[NettoP10])",
+          "formatString": "€ #,0"
+        },
+        {
+          "name": "Netto jaar P50",
+          "expression": "SELECTEDVALUE(DecisionOption[NettoP50])",
+          "formatString": "€ #,0"
+        },
+        {
+          "name": "Netto jaar P90",
+          "expression": "SELECTEDVALUE(DecisionOption[NettoP90])",
+          "formatString": "€ #,0"
+        }
+      ]
+    },
+    {
+      "name": "ScenarioCapacity",
+      "columns": [
+        {
+          "name": "Pct",
+          "dataType": "Double",
+          "formatString": "0.0%"
+        },
+        {
+          "name": "Keuze",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "ScenarioDelay",
+      "columns": [
+        {
+          "name": "Minutes",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Keuze",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "ScenarioCost",
+      "columns": [
+        {
+          "name": "EUR",
+          "dataType": "Int64",
+          "formatString": "€ #,0;€ -#,0"
+        },
+        {
+          "name": "Keuze",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "ScenarioRealization",
+      "columns": [
+        {
+          "name": "Fraction",
+          "dataType": "Double"
+        },
+        {
+          "name": "Keuze",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "DQRule",
+      "columns": [
+        {
+          "name": "Regel",
+          "dataType": "string"
+        },
+        {
+          "name": "Aantal",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Afhandeling",
+          "dataType": "string"
+        },
+        {
+          "name": "Ernst",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "LoadRun",
+      "columns": [
+        {
+          "name": "Run",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Status",
+          "dataType": "string"
+        },
+        {
+          "name": "Nieuw",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Correcties",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Duplicaten",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Afgekeurd",
+          "dataType": "Int64"
+        },
+        {
+          "name": "FactRijen",
+          "dataType": "Int64"
+        },
+        {
+          "name": "BronVoertuigen",
+          "dataType": "Int64"
+        },
+        {
+          "name": "FactVoertuigen",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Verschil",
+          "dataType": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "DecisionOption",
+      "columns": [
+        {
+          "name": "Optie",
+          "dataType": "string"
+        },
+        {
+          "name": "ImplementatieEUR",
+          "dataType": "Int64"
+        },
+        {
+          "name": "JaarlijkseOpexEUR",
+          "dataType": "Int64"
+        },
+        {
+          "name": "TijdwinstLaagMin",
+          "dataType": "Int64"
+        },
+        {
+          "name": "TijdwinstHoogMin",
+          "dataType": "Int64"
+        },
+        {
+          "name": "BenutbaarLaag",
+          "dataType": "Double"
+        },
+        {
+          "name": "BenutbaarHoog",
+          "dataType": "Double"
+        },
+        {
+          "name": "BrutoP50",
+          "dataType": "Int64"
+        },
+        {
+          "name": "NettoP10",
+          "dataType": "Int64"
+        },
+        {
+          "name": "NettoP50",
+          "dataType": "Int64"
+        },
+        {
+          "name": "NettoP90",
+          "dataType": "Int64"
+        },
+        {
+          "name": "KansPositief",
+          "dataType": "Double"
+        },
+        {
+          "name": "TerugverdientijdMaanden",
+          "dataType": "Double"
+        },
+        {
+          "name": "PaybackCondition",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "PilotSummary",
+      "columns": [
+        {
+          "name": "Groep",
+          "dataType": "string"
+        },
+        {
+          "name": "Periode",
+          "dataType": "string"
+        },
+        {
+          "name": "Sessies",
+          "dataType": "Int64"
+        },
+        {
+          "name": "GemiddeldeVertraging",
+          "dataType": "Double"
+        }
+      ]
+    },
+    {
+      "name": "Association",
+      "columns": [
+        {
+          "name": "Factor",
+          "dataType": "string"
+        },
+        {
+          "name": "DelayAssociationMinutes",
+          "dataType": "Double"
+        }
+      ]
+    },
+    {
+      "name": "KPIContract",
+      "columns": [
+        {
+          "name": "KPI",
+          "dataType": "string"
+        },
+        {
+          "name": "Definitie",
+          "dataType": "string"
+        },
+        {
+          "name": "Eigenaar",
+          "dataType": "string"
+        },
+        {
+          "name": "Doel",
+          "dataType": "string"
+        },
+        {
+          "name": "Controle",
+          "dataType": "string"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Date_to_Ops",
+      "fromTable": "FactOps",
+      "fromColumn": "DateKey",
+      "toTable": "DimDate",
+      "toColumn": "DateKey",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "Terminal_to_Ops",
+      "fromTable": "FactOps",
+      "fromColumn": "TerminalKey",
+      "toTable": "DimTerminal",
+      "toColumn": "TerminalKey",
+      "crossFilteringBehavior": "OneDirection"
+    }
+  ]
+}

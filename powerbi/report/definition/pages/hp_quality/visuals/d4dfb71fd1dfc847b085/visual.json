@@ -1,0 +1,317 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "d4dfb71fd1dfc847b085",
+  "position": {
+    "x": 24,
+    "y": 613,
+    "z": 109,
+    "width": 1552,
+    "height": 215,
+    "tabOrder": 108
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Run"
+                }
+              },
+              "queryRef": "LoadRun.Run",
+              "nativeQueryRef": "Run",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "LoadRun.Status",
+              "nativeQueryRef": "Status",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Nieuw"
+                }
+              },
+              "queryRef": "LoadRun.Nieuw",
+              "nativeQueryRef": "Nieuw",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Correcties"
+                }
+              },
+              "queryRef": "LoadRun.Correcties",
+              "nativeQueryRef": "Correcties",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Duplicaten"
+                }
+              },
+              "queryRef": "LoadRun.Duplicaten",
+              "nativeQueryRef": "Duplicaten",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Afgekeurd"
+                }
+              },
+              "queryRef": "LoadRun.Afgekeurd",
+              "nativeQueryRef": "Afgekeurd",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "FactRijen"
+                }
+              },
+              "queryRef": "LoadRun.FactRijen",
+              "nativeQueryRef": "FactRijen",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "BronVoertuigen"
+                }
+              },
+              "queryRef": "LoadRun.BronVoertuigen",
+              "nativeQueryRef": "BronVoertuigen",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "FactVoertuigen"
+                }
+              },
+              "queryRef": "LoadRun.FactVoertuigen",
+              "nativeQueryRef": "FactVoertuigen",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LoadRun"
+                    }
+                  },
+                  "Property": "Verschil"
+                }
+              },
+              "queryRef": "LoadRun.Verschil",
+              "nativeQueryRef": "Verschil",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E1E7EF'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Laadlog · initieel, replay en late correcties'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#243B53'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
