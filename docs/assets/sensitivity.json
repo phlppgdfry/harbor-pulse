@@ -1,0 +1,839 @@
+{
+  "synthetic": true,
+  "scope": "Annual, all terminals; deterministic central time reduction; common realizable fraction",
+  "grid": [
+    {
+      "fraction": 0,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Do not implement",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": -45000.0,
+          "year_one_cash": -80000.0,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -12000.0,
+          "year_one_cash": -102000.0,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -131400.0,
+          "year_one_cash": -139400.0,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Do not implement",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": -45000.0,
+          "year_one_cash": -80000.0,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -12000.0,
+          "year_one_cash": -102000.0,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -131400.0,
+          "year_one_cash": -139400.0,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Do not implement",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": -45000.0,
+          "year_one_cash": -80000.0,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -12000.0,
+          "year_one_cash": -102000.0,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -131400.0,
+          "year_one_cash": -139400.0,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Do not implement",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": -45000.0,
+          "year_one_cash": -80000.0,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -12000.0,
+          "year_one_cash": -102000.0,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -131400.0,
+          "year_one_cash": -139400.0,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.03,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Do not implement",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": -17481.75,
+          "year_one_cash": -52481.75,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -8789.54,
+          "year_one_cash": -98789.54,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -110761.31,
+          "year_one_cash": -118761.31,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.03,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Do not implement",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": -6474.45,
+          "year_one_cash": -41474.45,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -7505.35,
+          "year_one_cash": -97505.35,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -102505.84,
+          "year_one_cash": -110505.84,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.03,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 4532.85,
+          "year_one_cash": -30467.15,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -6221.17,
+          "year_one_cash": -96221.17,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -94250.36,
+          "year_one_cash": -102250.36,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.03,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 21043.8,
+          "year_one_cash": -13956.2,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -4294.89,
+          "year_one_cash": -94294.89,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -81867.15,
+          "year_one_cash": -89867.15,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.05,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 863.75,
+          "year_one_cash": -34136.25,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -6649.23,
+          "year_one_cash": -96649.23,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -97002.19,
+          "year_one_cash": -105002.19,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.05,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 19209.25,
+          "year_one_cash": -15790.75,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -4508.92,
+          "year_one_cash": -94508.92,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -83243.06,
+          "year_one_cash": -91243.06,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.05,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 37554.75,
+          "year_one_cash": 2554.75,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -2368.61,
+          "year_one_cash": -92368.61,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -69483.94,
+          "year_one_cash": -77483.94,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.05,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 65073.0,
+          "year_one_cash": 30073.0,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 841.85,
+          "year_one_cash": -89158.15,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -48845.25,
+          "year_one_cash": -56845.25,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.075,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 23795.62,
+          "year_one_cash": -11204.38,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -3973.84,
+          "year_one_cash": -93973.84,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -79803.28,
+          "year_one_cash": -87803.28,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.075,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 51313.88,
+          "year_one_cash": 16313.88,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -763.38,
+          "year_one_cash": -90763.38,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -59164.59,
+          "year_one_cash": -67164.59,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.075,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 78832.12,
+          "year_one_cash": 43832.12,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 2447.08,
+          "year_one_cash": -87552.92,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -38525.91,
+          "year_one_cash": -46525.91,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.075,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 120109.5,
+          "year_one_cash": 85109.5,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 7262.77,
+          "year_one_cash": -82737.23,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -7567.88,
+          "year_one_cash": -15567.88,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.1,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 46727.5,
+          "year_one_cash": 11727.5,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": -1298.46,
+          "year_one_cash": -91298.46,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -62604.38,
+          "year_one_cash": -70604.38,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.1,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 83418.5,
+          "year_one_cash": 48418.5,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 2982.16,
+          "year_one_cash": -87017.84,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -35086.12,
+          "year_one_cash": -43086.12,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.1,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 120109.5,
+          "year_one_cash": 85109.5,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 7262.78,
+          "year_one_cash": -82737.23,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -7567.87,
+          "year_one_cash": -15567.87,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.1,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 175146.0,
+          "year_one_cash": 140146.0,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 13683.7,
+          "year_one_cash": -76316.3,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 33709.5,
+          "year_one_cash": 25709.5,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.125,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 69659.38,
+          "year_one_cash": 34659.38,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 1376.93,
+          "year_one_cash": -88623.07,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -45405.47,
+          "year_one_cash": -53405.47,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.125,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 115523.12,
+          "year_one_cash": 80523.12,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 6727.7,
+          "year_one_cash": -83272.3,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -11007.66,
+          "year_one_cash": -19007.66,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.125,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 161386.88,
+          "year_one_cash": 126386.88,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 12078.47,
+          "year_one_cash": -77921.53,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 23390.16,
+          "year_one_cash": 15390.16,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.125,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 230182.5,
+          "year_one_cash": 195182.5,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 20104.62,
+          "year_one_cash": -69895.38,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 74986.88,
+          "year_one_cash": 66986.88,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.15,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 92591.25,
+          "year_one_cash": 57591.25,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 4052.31,
+          "year_one_cash": -85947.69,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": -28206.56,
+          "year_one_cash": -36206.56,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.15,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 147627.75,
+          "year_one_cash": 112627.75,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 10473.24,
+          "year_one_cash": -79526.76,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 13070.81,
+          "year_one_cash": 5070.81,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.15,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 202664.25,
+          "year_one_cash": 167664.25,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 16894.16,
+          "year_one_cash": -73105.84,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 54348.19,
+          "year_one_cash": 46348.19,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.15,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 285219.0,
+          "year_one_cash": 250219.0,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 26525.55,
+          "year_one_cash": -63474.45,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 116264.25,
+          "year_one_cash": 108264.25,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "hour_value": 25,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 138455.0,
+          "year_one_cash": 103455.0,
+          "break_even_realizable_fraction": 0.049058352184459406
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 9403.08,
+          "year_one_cash": -80596.92,
+          "break_even_realizable_fraction": 0.1121333764216215
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 6191.25,
+          "year_one_cash": -1808.75,
+          "break_even_realizable_fraction": 0.19100051783816194
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "hour_value": 35,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 211837.0,
+          "year_one_cash": 176837.0,
+          "break_even_realizable_fraction": 0.035041680131756715
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 17964.32,
+          "year_one_cash": -72035.68,
+          "break_even_realizable_fraction": 0.08009526887258678
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 61227.75,
+          "year_one_cash": 53227.75,
+          "break_even_realizable_fraction": 0.1364289413129728
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "hour_value": 45,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 285219.0,
+          "year_one_cash": 250219.0,
+          "break_even_realizable_fraction": 0.027254640102477447
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 26525.55,
+          "year_one_cash": -63474.45,
+          "break_even_realizable_fraction": 0.06229632023423416
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 116264.25,
+          "year_one_cash": 108264.25,
+          "break_even_realizable_fraction": 0.10611139879897886
+        }
+      ]
+    },
+    {
+      "fraction": 0.2,
+      "hour_value": 60,
+      "vehicles": 366910,
+      "preferred": "Dispatch / slots",
+      "options": [
+        {
+          "option": "Dispatch / slots",
+          "annual_net": 395292.0,
+          "year_one_cash": 360292.0,
+          "break_even_realizable_fraction": 0.020440980076858087
+        },
+        {
+          "option": "Yard expansion",
+          "annual_net": 39367.4,
+          "year_one_cash": -50632.6,
+          "break_even_realizable_fraction": 0.046722240175675625
+        },
+        {
+          "option": "Additional staffing",
+          "annual_net": 198819.0,
+          "year_one_cash": 190819.0,
+          "break_even_realizable_fraction": 0.07958354909923414
+        }
+      ]
+    }
+  ],
+  "caution": "A sensitivity surface over invented inputs, not a probability forecast. Ranking by annual value; year-one cash is shown separately."
+}

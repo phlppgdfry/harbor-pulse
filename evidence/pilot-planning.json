@@ -1,0 +1,185 @@
+{
+  "synthetic": true,
+  "draws_per_cell": 1000,
+  "paired_difference_sd_minutes": 3,
+  "planning": [
+    {
+      "post_days": 14,
+      "baseline_days": 14,
+      "effect_minutes": 0,
+      "rejection_rate": 0.065,
+      "mean_estimate": 0.008559340101658102
+    },
+    {
+      "post_days": 14,
+      "baseline_days": 14,
+      "effect_minutes": 1.5,
+      "rejection_rate": 0.306,
+      "mean_estimate": -1.5016248775144287
+    },
+    {
+      "post_days": 14,
+      "baseline_days": 14,
+      "effect_minutes": 3,
+      "rejection_rate": 0.769,
+      "mean_estimate": -3.013645944812597
+    },
+    {
+      "post_days": 14,
+      "baseline_days": 14,
+      "effect_minutes": 6,
+      "rejection_rate": 1.0,
+      "mean_estimate": -5.974183353343242
+    },
+    {
+      "post_days": 28,
+      "baseline_days": 14,
+      "effect_minutes": 0,
+      "rejection_rate": 0.057,
+      "mean_estimate": 0.0366385637518921
+    },
+    {
+      "post_days": 28,
+      "baseline_days": 14,
+      "effect_minutes": 1.5,
+      "rejection_rate": 0.332,
+      "mean_estimate": -1.4697271681261237
+    },
+    {
+      "post_days": 28,
+      "baseline_days": 14,
+      "effect_minutes": 3,
+      "rejection_rate": 0.847,
+      "mean_estimate": -2.989273567831268
+    },
+    {
+      "post_days": 28,
+      "baseline_days": 14,
+      "effect_minutes": 6,
+      "rejection_rate": 1.0,
+      "mean_estimate": -6.014264580913786
+    },
+    {
+      "post_days": 42,
+      "baseline_days": 14,
+      "effect_minutes": 0,
+      "rejection_rate": 0.064,
+      "mean_estimate": 0.01140011048763412
+    },
+    {
+      "post_days": 42,
+      "baseline_days": 14,
+      "effect_minutes": 1.5,
+      "rejection_rate": 0.371,
+      "mean_estimate": -1.5013586002832782
+    },
+    {
+      "post_days": 42,
+      "baseline_days": 14,
+      "effect_minutes": 3,
+      "rejection_rate": 0.917,
+      "mean_estimate": -3.0276080579043922
+    },
+    {
+      "post_days": 42,
+      "baseline_days": 14,
+      "effect_minutes": 6,
+      "rejection_rate": 1.0,
+      "mean_estimate": -5.976877698262288
+    },
+    {
+      "post_days": 56,
+      "baseline_days": 14,
+      "effect_minutes": 0,
+      "rejection_rate": 0.053,
+      "mean_estimate": 0.0008952619580722635
+    },
+    {
+      "post_days": 56,
+      "baseline_days": 14,
+      "effect_minutes": 1.5,
+      "rejection_rate": 0.392,
+      "mean_estimate": -1.49087481728019
+    },
+    {
+      "post_days": 56,
+      "baseline_days": 14,
+      "effect_minutes": 3,
+      "rejection_rate": 0.904,
+      "mean_estimate": -2.9806517008652422
+    },
+    {
+      "post_days": 56,
+      "baseline_days": 14,
+      "effect_minutes": 6,
+      "rejection_rate": 1.0,
+      "mean_estimate": -5.993890476028456
+    }
+  ],
+  "placebo_95": [
+    -2.1582882761770663,
+    2.2068226935153685
+  ],
+  "spillover_missingness": [
+    {
+      "spillover_fraction": 0,
+      "random_missing_fraction": 0,
+      "mean_estimate": -6.026703254379301,
+      "mean_retained_days": 28
+    },
+    {
+      "spillover_fraction": 0,
+      "random_missing_fraction": 0.1,
+      "mean_estimate": -5.996085109654452,
+      "mean_retained_days": 25.12
+    },
+    {
+      "spillover_fraction": 0,
+      "random_missing_fraction": 0.25,
+      "mean_estimate": -5.997534556945259,
+      "mean_retained_days": 21.019
+    },
+    {
+      "spillover_fraction": 0.25,
+      "random_missing_fraction": 0,
+      "mean_estimate": -4.500002397806547,
+      "mean_retained_days": 28
+    },
+    {
+      "spillover_fraction": 0.25,
+      "random_missing_fraction": 0.1,
+      "mean_estimate": -4.537392124953292,
+      "mean_retained_days": 25.288
+    },
+    {
+      "spillover_fraction": 0.25,
+      "random_missing_fraction": 0.25,
+      "mean_estimate": -4.475623147379043,
+      "mean_retained_days": 20.926
+    },
+    {
+      "spillover_fraction": 0.5,
+      "random_missing_fraction": 0,
+      "mean_estimate": -2.9581562470613507,
+      "mean_retained_days": 28
+    },
+    {
+      "spillover_fraction": 0.5,
+      "random_missing_fraction": 0.1,
+      "mean_estimate": -2.977394119207926,
+      "mean_retained_days": 25.193
+    },
+    {
+      "spillover_fraction": 0.5,
+      "random_missing_fraction": 0.25,
+      "mean_estimate": -2.9782973170500555,
+      "mean_retained_days": 21.056
+    }
+  ],
+  "caveats": [
+    "Normal 1.96 critical value approximates small-sample inference; empirical null rate is disclosed.",
+    "Random missingness only: nonrandom loss can bias estimates.",
+    "Historical paired-day variability must replace the invented SD before a real pilot.",
+    "Daily assignment assumes intervention can switch without carryover; otherwise randomize persistent clusters."
+  ]
+}

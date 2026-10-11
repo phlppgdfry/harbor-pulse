@@ -33,4 +33,16 @@ GitHub Actions runs tests and reproduces the synthetic evidence on changes, manu
 - Failed report release: publish the private previous report-definition backup, restoring its previous model reference. Confirm pages and DAX before marking recovery complete.
 - Never delete a historical model while it is still referenced by a backup or report. This case does not automatically purge source or model history.
 
-The tests cover local atomic rollback. Cloud rollback is a documented operator procedure with saved backups; no deliberately disruptive production rollback drill was run.
+The tests cover local atomic rollback. An isolated temporary report copy was changed, restored from its own private backup and deleted. All definition parts and binding matched; the original report stayed unchanged. [Cloud recovery evidence](../evidence/recovery-drill.json). This drill tests report-definition rollback, not warehouse corruption or model-data recovery.
+
+## Activated local live monitor
+
+On the portfolio owner's Mac, `com.reviewell.harbor-pulse.health` is a LaunchAgent with a 3,600-second interval and RunAtLoad. It executes `scripts/cloud_operations.py health` using locally authenticated Fabric CLI. Account-specific arguments and the plist stay outside public source.
+
+Checks: report/model binding, independently expected vehicle total, zero reconciliation difference and >=99% departure coverage. Refresh history is inspected; this immutable push snapshot currently has no conventional refresh entries. An empty history is not a successful source refresh. The access endpoint returns GroupNotAccessible for My workspace; no authoritative roster or RLS check is claimed.
+
+Current private state: `build/cloud-health.private.json`. Logs: `build/health-monitor.log` and `build/health-monitor-error.log`. Failure produces a nonzero exit code for launchd/operator inspection. It does not send email or external messages. This is a local availability/consistency monitor, not a production freshness SLA service.
+
+Inspect with `launchctl print gui/$(id -u)/com.reviewell.harbor-pulse.health`. Stop with `launchctl bootout gui/$(id -u)/com.reviewell.harbor-pulse.health`. Regenerate the local arguments after an intentional model rebind. Do not schedule competing publication jobs without a lock and idempotent release design.
+
+The cloud helper retries transient read/idempotent operations and polls asynchronous operations. Ambiguous create/delete outcomes require inspection; do not blindly duplicate a mutation. Cleanup is limited to the temporary report created by the drill.

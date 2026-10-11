@@ -1,0 +1,32 @@
+{
+  "browser_plugin": "not available",
+  "method": "Headless Playwright CLI; no user browser controlled",
+  "checks": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "identity": "Harbor Pulse · Philippe Godfroy",
+      "meaningful_content": "From messy terminal events to defensible decisions.",
+      "scenario_zero_benefit": "Do not implement",
+      "scenario_rows": 3,
+      "horizontal_overflow": false,
+      "all_images_loaded": true,
+      "console_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "identity": "Harbor Pulse · Philippe Godfroy",
+      "meaningful_content": "From messy terminal events to defensible decisions.",
+      "scenario_zero_benefit": "Do not implement",
+      "scenario_rows": 3,
+      "horizontal_overflow": false,
+      "all_images_loaded": true,
+      "console_errors": []
+    }
+  ]
+}

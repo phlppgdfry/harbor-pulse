@@ -10,20 +10,21 @@
 
 This case follows the whole path: source contracts → audited ingestion → a governed star model → Power BI → an investment comparison → a pilot design. All organizations, records, costs and outcomes are fictitious. The cover is an evidence figure generated from the code, not a Power BI screenshot. Developed with AI assistance; the repository exposes the logic, assumptions and checks for review.
 
-## Start here
+## Review in 30 seconds
 
-```bash
-git clone https://github.com/phlppgdfry/harbor-pulse.git
-cd harbor-pulse
-python -m unittest discover -s tests -v
-python -m harbor_pulse demo
-python scripts/check_evidence.py
-python -m harbor_pulse monitor
-```
+**Problem:** reduce terminal delay without hiding bad data or overstating cash savings.
+**Approach:** audited Python/SQLite ingestion → weighted Power BI KPIs → investment sensitivity → a simulated pilot.
+**Recommendation:** pilot dispatch/appointment slots first under the invented assumptions; require real operational and finance evidence before investment.
+**Portfolio owner:** Philippe Godfroy; developed with substantial AI assistance. [Contribution, choices and interview guide](docs/OWNERSHIP.md).
 
-Python 3.12+; the core pipeline and analyses use the standard library. No cloud account, database server or secrets are needed to reproduce the case. The demo writes generated sources, a SQLite warehouse, load logs and results under ignored `build/`. For a second independent replay demonstration, choose a fresh output directory: `python -m harbor_pulse demo --output build/another-run`.
+| Your route | Start here |
+|---|---|
+| Recruiter / hiring manager | [Public walkthrough — no login](https://phlppgdfry.github.io/harbor-pulse/) · [Two-minute video](docs/assets/harbor-pulse-walkthrough.mp4) · [One-page PDF](output/pdf/harbor-pulse-recruiter-brief.pdf) |
+| Data analyst reviewer | [Five-minute tour](docs/RECRUITER-TOUR.md) · [SQL examples](sql/reviewer_queries.sql) · [Selected DAX](docs/DAX-EXAMPLES.md) |
+| Analytics / BI engineer | [Pipeline and tests](docs/PIPELINE.md) · [Operating evidence](docs/OPERATIONS.md) · [Implementation status](docs/CONTROL-STATUS.md) |
+| Decision / experiment reviewer | [Management memo](docs/EXECUTIVE-BRIEF.md) · [Robustness checks](docs/ROBUSTNESS.md) · [Pilot pre-registration](docs/PILOT-PREREGISTRATION.md) |
 
-Optional report generation: install `requirements-report.txt`, then run `python scripts/build_report.py` and `python scripts/validate_report.py`. [Power BI publication instructions](docs/POWER-BI.md) require your own authorized Microsoft account.
+The public walkthrough includes seven reproducible analysis figures and an interactive sensitivity comparison. **These are not Power BI screenshots.** Actual PNG export is disabled by the tenant and PDF export requires dedicated capacity; pixel-level Power BI QA remains blocked. [Export capability evidence](evidence/export-capabilities.json).
 
 ## Evidence you can inspect
 
@@ -106,7 +107,24 @@ The report has 12 pages, 132 report elements and 56 DAX measures across a daily 
 
 Problem framing, source contracts, SQL storage, idempotent ingestion, error quarantine, auditability, reconciliation, dimensional modeling, weighted DAX, scenario reasoning, experimental design, confidence versus assumption uncertainty, and a documented release/recovery process.
 
-It does **not** claim a real operational deployment, actual cost savings, validated causal predictions or production access controls. Workspace/RLS roles are designed; real users/groups are not invented or granted access. CI reproduces the synthetic case weekly; it does not automatically refresh a production Power BI tenant. [Implementation versus design](docs/CONTROL-STATUS.md)
+It does **not** claim a real operational deployment, actual cost savings, validated causal predictions or production access controls. Workspace/RLS roles are designed; real users/groups are not invented or granted access. CI reproduces the synthetic case weekly; a separate local authenticated API monitor checks the live report and snapshot. Neither performs native source refresh. [Implementation versus design](docs/CONTROL-STATUS.md)
+
+## Reproduce the case
+
+```bash
+git clone https://github.com/phlppgdfry/harbor-pulse.git
+cd harbor-pulse
+python -m unittest discover -s tests -v
+python -m harbor_pulse demo
+python scripts/check_evidence.py
+python -m harbor_pulse monitor
+```
+
+Python 3.12+; the core pipeline and analyses use the standard library. No cloud account, database server or secrets are needed to reproduce the case. The demo writes generated sources, a SQLite warehouse, load logs and results under ignored `build/`. For a second independent replay demonstration, choose a fresh output directory: `python -m harbor_pulse demo --output build/another-run`.
+
+Additional reviewer evidence: `python scripts/review_evidence.py`.
+
+Optional report generation: install `requirements-report.txt`, then run `python scripts/build_report.py` and `python scripts/validate_report.py`. [Power BI publication instructions](docs/POWER-BI.md) require your own authorized Microsoft account.
 
 ## Repository map
 

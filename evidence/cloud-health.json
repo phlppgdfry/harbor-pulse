@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-11T20:09:40.374714+00:00",
+  "browser_used": false,
+  "synthetic_model": true,
+  "checks": {
+    "report": {
+      "http_status": 200,
+      "expected_model_binding": true
+    },
+    "totals": {
+      "http_status": 200,
+      "totals": [
+        {
+          "[Vehicles]": 366910,
+          "[Difference]": 0,
+          "[Coverage]": 0.994818892916519
+        }
+      ],
+      "reconciled": true
+    },
+    "refresh_history": {
+      "http_status": 200,
+      "entry_count": 0,
+      "failed_entries": 0
+    },
+    "report_access": {
+      "http_status": 401,
+      "error": {
+        "code": "GroupNotAccessible",
+        "message": "Calling group APIs not permitted for personal workspace"
+      }
+    }
+  },
+  "healthy": true,
+  "limits": [
+    "Push snapshot health is checked; no conventional source refresh is performed.",
+    "Access API denial is a capability limit, not evidence that no other user has access.",
+    "Local scheduler depends on this computer and authenticated CLI."
+  ]
+}
