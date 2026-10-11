@@ -14,7 +14,7 @@ Status is evidence-based. “Blocked” means the requested result was not achie
 | 8 | Management conclusion | Delivered: decision request, reversal conditions and evidence before investment |
 | 9 | Technical tour | Delivered: five-minute reviewer route |
 | 10 | SQL / DAX selection | Delivered: runnable warehouse queries and extracted measure examples |
-| 11 | GitHub release | Delivered: versioned source and downloadable portfolio artifacts; repository homepage points to walkthrough |
+| 11 | GitHub release | Delivered: versioned source and downloadable portfolio artifacts; repository homepage points to walkthrough. Profile pinning remains manual: no repository-pin mutation is exposed by the inspected GitHub API |
 | 12 | Sensitivity analysis | Delivered: 32 input combinations, zero-benefit decision, break-even fractions and first-year cash |
 | 13 | Regression checks | Delivered: chronological holdout, mean baseline, weekly bootstrap, VIF, serial residuals and residual plots |
 | 14 | Pilot protocol | Delivered: pre-registration specification and simulations of null, power, placebo, random missingness and spillover |
