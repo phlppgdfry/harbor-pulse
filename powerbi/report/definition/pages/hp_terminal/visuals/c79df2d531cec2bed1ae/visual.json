@@ -43,7 +43,8 @@
                 }
               },
               "queryRef": "FactOps.Verblijftijd uur",
-              "nativeQueryRef": "Verblijftijd uur"
+              "nativeQueryRef": "Verblijftijd uur",
+              "active": true
             },
             {
               "field": {
@@ -57,7 +58,8 @@
                 }
               },
               "queryRef": "FactOps.Bezetting %",
-              "nativeQueryRef": "Bezetting %"
+              "nativeQueryRef": "Bezetting %",
+              "active": true
             },
             {
               "field": {
@@ -71,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.CO2 kg per voertuig",
-              "nativeQueryRef": "CO2 kg per voertuig"
+              "nativeQueryRef": "CO2 kg per voertuig",
+              "active": true
             }
           ]
         }
@@ -213,6 +216,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

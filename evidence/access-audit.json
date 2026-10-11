@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-11T22:18:31.376943+00:00",
+  "method": "Admin report/model user APIs",
+  "principals_sanitized": true,
+  "items": {
+    "report": {
+      "http_status": 200,
+      "principal_count": 1,
+      "only_expected_owner": true,
+      "rights": [
+        "Owner"
+      ]
+    },
+    "model": {
+      "http_status": 200,
+      "principal_count": 1,
+      "only_expected_owner": true,
+      "rights": [
+        "ReadWriteReshareExplore"
+      ]
+    }
+  },
+  "scope": "Explicit report/model access; not all inherited tenant-admin privileges"
+}

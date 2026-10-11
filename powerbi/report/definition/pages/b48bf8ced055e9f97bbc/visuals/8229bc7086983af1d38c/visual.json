@@ -43,7 +43,8 @@
                 }
               },
               "queryRef": "FactOps.Status punctualiteit",
-              "nativeQueryRef": "Status punctualiteit"
+              "nativeQueryRef": "Status punctualiteit",
+              "active": true
             },
             {
               "field": {
@@ -57,7 +58,8 @@
                 }
               },
               "queryRef": "FactOps.Status marge",
-              "nativeQueryRef": "Status marge"
+              "nativeQueryRef": "Status marge",
+              "active": true
             },
             {
               "field": {
@@ -71,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.Status bezetting",
-              "nativeQueryRef": "Status bezetting"
+              "nativeQueryRef": "Status bezetting",
+              "active": true
             }
           ]
         }
@@ -213,6 +216,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

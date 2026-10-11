@@ -43,7 +43,8 @@
                 }
               },
               "queryRef": "FactOps.Prioriteit",
-              "nativeQueryRef": "Prioriteit"
+              "nativeQueryRef": "Prioriteit",
+              "active": true
             },
             {
               "field": {
@@ -57,7 +58,8 @@
                 }
               },
               "queryRef": "FactOps.Aandachtscore",
-              "nativeQueryRef": "Aandachtscore"
+              "nativeQueryRef": "Aandachtscore",
+              "active": true
             },
             {
               "field": {
@@ -71,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.Verbeterpunt",
-              "nativeQueryRef": "Verbeterpunt"
+              "nativeQueryRef": "Verbeterpunt",
+              "active": true
             }
           ]
         }
@@ -230,6 +233,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

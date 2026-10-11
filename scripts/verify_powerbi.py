@@ -2,8 +2,8 @@
 import argparse,concurrent.futures,json,pathlib
 from publish_powerbi import call,ROOT
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--run',type=pathlib.Path,default=ROOT/'build/run');args=p.parse_args()
-    model=json.loads((ROOT/'build/publication.private.json').read_text());model_id=model['id']
+    p=argparse.ArgumentParser();p.add_argument('--run',type=pathlib.Path,default=ROOT/'build/run');p.add_argument('--model');args=p.parse_args()
+    model=json.loads((ROOT/'build/publication.private.json').read_text());model_id=args.model or model['id']
     output=ROOT/'build/query-verification';output.mkdir(exist_ok=True)
     def query(dax,key):
         data=call(f'datasets/{model_id}/executeQueries','post',{'queries':[{'query':dax}],'serializerSettings':{'includeNulls':True}},'powerbi',output/(key+'.private.json'))

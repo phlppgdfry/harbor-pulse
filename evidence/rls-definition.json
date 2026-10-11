@@ -1,0 +1,26 @@
+{
+  "native_model": true,
+  "roles": [
+    {
+      "path": "definition/roles/Terminal_Zeebrugge.tmdl",
+      "read_permission": true,
+      "terminal_filter_present": true,
+      "global_evidence_denied": true
+    },
+    {
+      "path": "definition/roles/Terminal_Antwerpen.tmdl",
+      "read_permission": true,
+      "terminal_filter_present": true,
+      "global_evidence_denied": true
+    },
+    {
+      "path": "definition/roles/Terminal_Gent.tmdl",
+      "read_permission": true,
+      "terminal_filter_present": true,
+      "global_evidence_denied": true
+    }
+  ],
+  "all_role_definitions_verified": true,
+  "viewer_enforcement_verified": false,
+  "reason": "PowerBINotLicensedException"
+}

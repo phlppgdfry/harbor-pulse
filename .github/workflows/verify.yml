@@ -19,6 +19,7 @@ jobs:
       - run: python -m harbor_pulse demo
       - run: python scripts/check_evidence.py
       - run: python scripts/review_evidence.py
+      - run: python scripts/build_native_model.py
       - run: sqlite3 build/run/warehouse.sqlite < sql/reviewer_queries.sql
       - run: python -m pip install 'jsonschema>=4.23,<5'
       - run: python scripts/build_report.py

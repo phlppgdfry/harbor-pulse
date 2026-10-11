@@ -43,7 +43,8 @@
                 }
               },
               "queryRef": "FactOps.Omzet",
-              "nativeQueryRef": "Omzet"
+              "nativeQueryRef": "Omzet",
+              "active": true
             },
             {
               "field": {
@@ -57,7 +58,8 @@
                 }
               },
               "queryRef": "FactOps.Kosten",
-              "nativeQueryRef": "Kosten"
+              "nativeQueryRef": "Kosten",
+              "active": true
             },
             {
               "field": {
@@ -71,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.Omzet per voertuig",
-              "nativeQueryRef": "Omzet per voertuig"
+              "nativeQueryRef": "Omzet per voertuig",
+              "active": true
             }
           ]
         }
@@ -213,6 +216,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

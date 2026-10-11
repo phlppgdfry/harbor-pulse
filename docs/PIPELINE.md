@@ -22,6 +22,6 @@ The reproduced sequence is initial ingest → identical replay → higher-versio
 
 ## Power BI delivery
 
-Push datasets append rows and do not offer row-level upserts through this case's API. Consequently **incremental processing lives in SQLite; Power BI receives a new immutable validated snapshot**. The report is rebound after query checks. The previous model and report-definition backup remain available for recovery. No clear-and-reload gap is presented as production-grade incremental refresh.
+Incremental processing lives in SQLite. The active native Power BI model imports a typed, embedded curated snapshot and supports actual native refresh. Source content changes require explicit model release and revalidation; daily unchanged replay and native refresh do not create duplicate models. The previous push snapshot remains archived for recovery. No source CDC or native incremental partition refresh is claimed. See [native operations](NATIVE-OPERATIONS.md).
 
 The demo retains all local history. Production retention, retry/backoff, source SLAs, distributed locking, secrets management and fleet-scale storage need explicit design before rollout. See [control status](CONTROL-STATUS.md).

@@ -1,0 +1,9 @@
+{
+  "terminal": "Antwerpen",
+  "month": "2026-04",
+  "rendered_vehicles": 9671,
+  "expected_source_vehicles": 9671,
+  "passed": true,
+  "filters_persisted": false,
+  "user_browser_controlled": false
+}

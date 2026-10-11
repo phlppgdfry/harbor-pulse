@@ -31,6 +31,7 @@ def vis(page,key,kind,x,y,w,h,title=None,roles=None,bg='#FFFFFF'):
  visuals.append((page,v));return v
 def text(page,key,content,x,y,w,h,size=13,bg='#FFFFFF',fg=INK):
  v=vis(page,key,'textbox',x,y,w,h,bg=bg)
+ v['visual']['visualContainerObjects']['padding']=obj(top=lit(2),bottom=lit(2),left=lit(16),right=lit(16))
  v['visual']['objects']={'general':obj(paragraphs=[{'textRuns':[{'value':line,'textStyle':{'fontFamily':'Segoe UI','fontSize':f'{size}pt','color':fg,'fontWeight':'bold' if i==0 else 'normal'}}]} for i,line in enumerate(content.split('\n'))])};return v
 def card(page,key,metric,x,y,w=370,h=116):return vis(page,key,'cardVisual',x,y,w,h,roles={'Data':[m(metric)]})
 def cards(page,metrics,y=200):
@@ -45,6 +46,8 @@ def chart(page,key,kind,title,category,metrics,x,y,w,h,series=None):
  return v
 def table(page,key,title,refs,x,y,w,h,sort=None,descending=False):
  v=vis(page,key,'tableEx',x,y,w,h,title,{'Values':refs})
+ for projection in v['visual']['query']['queryState']['Values']['projections']:projection['active']=True
+ v['visual']['objects']={'total':obj(totals=lit(False))}
  if sort:v['visual']['query']['sortDefinition']={'sort':[{'field':field(sort),'direction':'Descending' if descending else 'Ascending'}]}
  return v
 def slicer(page,key,ref,x,y,w,h=66,single=False,title=None):
@@ -101,10 +104,10 @@ chart(p,'goal','lineChart','Marge versus doel van 35%',month,['Marge %','Doel ma
 table(p,'cost','Kosten en opbrengst per terminal',[terminal,m('Omzet'),m('Kosten'),m('Omzet per voertuig')],1014,642,562,286)
 
 p=pages[5][0]
-slicer(p,'capacity',d('ScenarioCapacity','Keuze'),24,200,370,86,True,'Extra yardcapaciteit · standaard 0%')
-slicer(p,'delay',d('ScenarioDelay','Keuze'),418,200,370,86,True,'Minder vertraging · standaard 0 minuten')
-slicer(p,'rate',d('ScenarioCost','Keuze'),812,200,370,86,True,'Wachtuurwaarde · standaard €45')
-slicer(p,'realization',d('ScenarioRealization','Keuze'),1206,200,370,86,True,'Benutbare tijdwinst · standaard 10%')
+slicer(p,'capacity',d('ScenarioCapacity','Keuze'),24,200,370,104,True,'Extra yardcapaciteit · standaard 0%')
+slicer(p,'delay',d('ScenarioDelay','Keuze'),418,200,370,104,True,'Minder vertraging · standaard 0 minuten')
+slicer(p,'rate',d('ScenarioCost','Keuze'),812,200,370,104,True,'Wachtuurwaarde · standaard €45')
+slicer(p,'realization',d('ScenarioRealization','Keuze'),1206,200,370,104,True,'Benutbare tijdwinst · standaard 10%')
 cards(p,['Scenario bezetting %','Scenario vertraging min','Bespaarde wachturen','Indicatieve besparing'],306)
 chart(p,'capacity_compare','clusteredBarChart','Bezetting: basis versus scenario',terminal,['Bezetting %','Scenario bezetting %'],24,442,760,260)
 chart(p,'time_compare','clusteredBarChart','Vertraging: basis versus scenario',terminal,['Vertraging min','Scenario vertraging min'],804,442,772,260)

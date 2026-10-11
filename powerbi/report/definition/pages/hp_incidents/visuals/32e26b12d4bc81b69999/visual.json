@@ -73,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.Voertuigen",
-              "nativeQueryRef": "Voertuigen"
+              "nativeQueryRef": "Voertuigen",
+              "active": true
             },
             {
               "field": {
@@ -87,7 +88,8 @@
                 }
               },
               "queryRef": "FactOps.Volumeverschil",
-              "nativeQueryRef": "Volumeverschil"
+              "nativeQueryRef": "Volumeverschil",
+              "active": true
             },
             {
               "field": {
@@ -101,7 +103,8 @@
                 }
               },
               "queryRef": "FactOps.Vertraging min",
-              "nativeQueryRef": "Vertraging min"
+              "nativeQueryRef": "Vertraging min",
+              "active": true
             },
             {
               "field": {
@@ -115,7 +118,8 @@
                 }
               },
               "queryRef": "FactOps.Bezetting %",
-              "nativeQueryRef": "Bezetting %"
+              "nativeQueryRef": "Bezetting %",
+              "active": true
             }
           ]
         }
@@ -274,6 +278,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

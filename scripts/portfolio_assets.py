@@ -66,8 +66,8 @@ line(249,'RECOMMENDATION: PILOT DISPATCH FIRST',10,True);line(230,'Under invente
 line(198,'EVIDENCE THAT CAN BE REVIEWED',10,True)
 line(179,'366,910 vehicle units  |  36 late revisions  |  216 duplicates skipped  |  0 reconciliation gap')
 line(161,'Executable tests, CI, SQL/DAX examples, sensitivity, diagnostics and recovery evidence.')
-line(128,'SCOPE AND LIMITS',10,True);line(109,'All source records and outcomes are fictitious. Role/RLS design is not deployed.')
-line(92,'Charts are analysis figures; actual Power BI image export is blocked in this environment.')
+line(128,'SCOPE AND LIMITS',10,True);line(109,'All source records and outcomes are fictitious. Native terminal roles are deployed.')
+line(92,'Power BI screenshots/pixel review are online. RLS viewer tests remain license-blocked.')
 line(57,'Case, walkthrough, code and evidence: github.com/phlppgdfry/harbor-pulse',10,True)
 c.linkURL('https://github.com/phlppgdfry/harbor-pulse',(40,49,551,71),relative=0);c.showPage();c.save()
 # Slides for a 120-second walkthrough: titles, 3 concise lines, actual figures.

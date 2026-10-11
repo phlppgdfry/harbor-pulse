@@ -7,14 +7,14 @@
 | Incremental updates | Implemented versioned SQLite upserts | File adapter still scans snapshots |
 | Error handling / quarantine / audit | Implemented and tested | Local single-writer database, no distributed retry orchestration |
 | Reconciliation / publication gate | Implemented and tested | Thresholds are case assumptions |
-| Daily dimensional model and DAX | Implemented, published and query-checked | Power BI receives immutable snapshots, not native incremental refresh |
+| Daily dimensional model and DAX | Implemented, published and query-checked | Native import with typed M snapshot partitions; no source CDC or native incremental partitions |
 | Alternative-explanation analysis | OLS, weekly bootstrap, VIF, residual diagnostics and chronological holdout | Synthetic association; Q4 lacks the maintenance episode; no production validation |
 | Costs / constraints / uncertainty | Monte Carlo plus sensitivity, break-even and first-year cash | Parameters are invented; sensitivity is not a forecast |
 | Effect measurement | Randomized simulation, null/placebo, power, dropout and spillover planning; written pre-registration | No real intervention, registered protocol or measured guardrail outcomes |
-| Local monitoring and weekly CI | Local hourly live API monitor activated and first run succeeded; weekly synthetic CI | Requires this Mac and CLI auth; no automatic tenant/source refresh or external notifications |
-| Production access roles / RLS | Designed and documented | Real groups/workspace setup not performed |
+| Local monitoring and weekly CI | Daily native refresh + reconciliation, hourly ingest/refresh SLA monitor and weekly CI | Requires this Mac and CLI auth; embedded synthetic source, no live operational feed or external notifications |
+| Access roles / RLS | Three native terminal roles deployed; explicit owner-only access audited via admin APIs | Role-specific viewer rendering is license-blocked; no enforcement pass claimed |
 | Report backup / recovery | Local rollback and isolated cloud report-definition restore tested | Snapshot data refresh/recovery is not exercised by the report-only drill |
-| Pixel-level report QA | Blocked: PNG tenant disabled; PDF lacks dedicated capacity | Schema/DAX/read-back do not prove pixel rendering |
+| Pixel-level report QA | All twelve pages captured with the Microsoft SDK and visually reviewed; concrete rendering defects fixed | API file export stays restricted; selected desktop viewport, not every device/filter combination |
 
 This case demonstrates an end-to-end analytical operating model. It does not label its author senior based on code volume or page count, and it does not present simulated outcomes as professional business achievements.
 

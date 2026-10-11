@@ -48,22 +48,39 @@ def fingerprints(definition):
     return {p['path']:hashlib.sha256(base64.b64decode(p['payload'])).hexdigest() for p in definition['definition']['parts']}
 
 def health(report,model,workspace):
-    result=dict(checked_at=dt.datetime.now(dt.timezone.utc).isoformat(),browser_used=False,synthetic_model=True,checks={})
-    for name,url in [('report','reports/'+report),('totals','datasets/'+model+'/executeQueries'),('refresh_history','datasets/'+model+'/refreshes'),('report_access','groups/'+workspace+'/reports/'+report+'/users')]:
+    result=dict(checked_at=dt.datetime.now(dt.timezone.utc).isoformat(),browser_used=False,synthetic_model=True,checks={});access_identities={}
+    for name,url in [('report','reports/'+report),('totals','datasets/'+model+'/executeQueries'),('refresh_history','datasets/'+model+'/refreshes'),('report_access','admin/reports/'+report+'/users'),('model_access','admin/datasets/'+model+'/users')]:
         body={'queries':[{'query':'EVALUATE ROW("Vehicles",[Voertuigen],"Difference",[Bron fact verschil],"Coverage",[Vertrekdekking %])'}]} if name=='totals' else None
         data=api(url,'post' if body else 'get',body)
         (ROOT/'build'/f'health-{name}.private.json').write_text(json.dumps(data,indent=2))
         entry=dict(http_status=data['status_code'])
+        if name in ('report_access','model_access') and data['status_code']==200:
+            users=data['text'].get('value',[]);entry['principal_count']=len(users);entry['rights']=[u.get('reportUserAccessRight',u.get('datasetUserAccessRight')) for u in users];access_identities[name]=[u.get('identifier') for u in users]
         if name=='report' and data['status_code']==200:entry['expected_model_binding']=data['text'].get('datasetId')==model
         if name=='refresh_history' and data['status_code']==200:
-            entries=data['text'].get('value',[]);entry['entry_count']=len(entries);entry['failed_entries']=sum(r.get('status')=='Failed' for r in entries)
+            entries=data['text'].get('value',[]);entry['entry_count']=len(entries);entry['failed_entries']=sum(r.get('status')=='Failed' for r in entries);entry['latest_status']=max(entries,key=lambda r:r.get('startTime','')).get('status') if entries else None
         if name=='totals' and data['status_code']==200:
             rows=data['text'].get('results',[{}])[0].get('tables',[{}])[0].get('rows',[])
             entry['totals']=rows;entry['reconciled']=bool(rows) and rows[0].get('[Difference]')==0 and rows[0].get('[Vehicles]')==366910 and rows[0].get('[Coverage]',0)>=.99
         if data['status_code']>=400:entry['error']=data.get('text',{}).get('error',{})
         result['checks'][name]=entry
     result['healthy']=result['checks']['report'].get('expected_model_binding',False) and result['checks']['totals'].get('reconciled',False)
-    result['limits']=['Push snapshot health is checked; no conventional source refresh is performed.','Access API denial is a capability limit, not evidence that no other user has access.','Local scheduler depends on this computer and authenticated CLI.']
+    result['access_audit']={'single_matching_owner':len(access_identities.get('report_access',[]))==1 and access_identities.get('report_access')==access_identities.get('model_access'),'report_owner_right':result['checks']['report_access'].get('rights')==['Owner']}
+    result['healthy']=result['healthy'] and all(result['access_audit'].values())
+    completed=[r for r in entries if r.get('status')=='Completed'] if 'entries' in locals() else []
+    if completed:
+        last=max(completed,key=lambda r:r.get('endTime',''));age=(dt.datetime.now(dt.timezone.utc)-dt.datetime.fromisoformat(last['endTime'].replace('Z','+00:00'))).total_seconds()/3600
+        result['refresh_sla']={'last_completed':last['endTime'],'age_hours':age,'max_age_hours':26,'healthy':0<=age<=26};result['healthy']=result['healthy'] and result['refresh_sla']['healthy'] and result['checks']['refresh_history'].get('latest_status')!='Failed'
+    else:
+        result['refresh_sla']={'healthy':False,'reason':'no_completed_native_refresh'};result['healthy']=False
+    state=ROOT/'build/refresh-state.private.json'
+    if state.exists():
+        import sys
+        sys.path.insert(0,str(ROOT))
+        from harbor_pulse.refresh_control import evaluate
+        result['ingest_sla']=evaluate(json.loads(state.read_text()));result['healthy']=result['healthy'] and result['ingest_sla']['healthy']
+    if not state.exists():result['healthy']=False;result['ingest_sla']={'healthy':False,'reason':'missing_ingest_state'}
+    result['limits']=['Embedded source is synthetic and versioned, not a live operational system.','Native terminal roles exist; viewer enforcement remains license-blocked.','Local scheduler depends on this computer and authenticated CLI.']
     return result
 
 def drill(report,workspace):

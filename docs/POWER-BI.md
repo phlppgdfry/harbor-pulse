@@ -2,7 +2,9 @@
 
 Local reproduction is account-free. Publication needs Microsoft Fabric CLI (`fab`), an existing authorized Microsoft account and a workspace you can write to. This code grants no additional permissions.
 
-The model schema/data are generated at `build/run/model.json` and `build/run/tables.json`. `scripts/publish_powerbi.py` publishes a validated new model snapshot using the CLI's Power BI audience. It refuses to create another snapshot if a publication receipt exists.
+The active case now uses a native import model with terminal roles and monitored refresh. [Native publication and operating notes](NATIVE-OPERATIONS.md). Generate its account-free source with `python scripts/build_native_model.py`.
+
+The following legacy push-model workflow remains available for comparison. The model schema/data are generated at `build/run/model.json` and `build/run/tables.json`. `scripts/publish_powerbi.py` publishes a validated new model snapshot using the CLI's Power BI audience. It refuses to create another snapshot if a publication receipt exists.
 
 ```bash
 python -m harbor_pulse demo

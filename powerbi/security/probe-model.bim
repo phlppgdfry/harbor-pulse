@@ -1,0 +1,56 @@
+{
+  "name": "HarborPulseSecurityProbe",
+  "compatibilityLevel": 1601,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "defaultMode": "import",
+    "tables": [
+      {
+        "name": "FactOps",
+        "columns": [
+          {
+            "name": "TerminalKey",
+            "dataType": "int64",
+            "sourceColumn": "[TerminalKey]",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Vehicles",
+            "dataType": "int64",
+            "sourceColumn": "[Vehicles]",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "measures": [
+          {
+            "name": "VehicleTotal",
+            "expression": "SUM(FactOps[Vehicles])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactOps",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DATATABLE(\"TerminalKey\", INTEGER, \"Vehicles\", INTEGER, {{1,100},{2,200},{3,300}})"
+            }
+          }
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "name": "Zeebrugge",
+        "modelPermission": "read",
+        "tablePermissions": [
+          {
+            "name": "FactOps",
+            "filterExpression": "[TerminalKey] = 1"
+          }
+        ]
+      }
+    ]
+  }
+}

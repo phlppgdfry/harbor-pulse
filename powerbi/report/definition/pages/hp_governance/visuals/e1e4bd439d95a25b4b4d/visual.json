@@ -81,14 +81,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "2D"
                 }
               }
             },
@@ -144,7 +144,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SQLite-laadlog toont succes/falen, bronwatermarks, quarantaines en reconciliatie. GitHub CI reproduceert tests en demo wekelijks. Power BI-publicatie is handmatig via CLI; geen automatische productie-refresh ingesteld.",
+                    "value": "SQLite-laadlog toont succes/falen, bronwatermarks, quarantaines en reconciliatie. GitHub CI reproduceert tests en demo wekelijks. Lokale dagelijkse ingestie + native refresh + cloudreconciliatie; uurmonitor bewaakt de 26-uurs SLA. Synthetische bron; Mac en CLI-aanmelding moeten beschikbaar blijven.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "13pt",

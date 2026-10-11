@@ -1,0 +1,8 @@
+{
+  "native_model_created": true,
+  "native_refresh_completed": true,
+  "probe_owner_total_verified": 600,
+  "viewer_enforcement_verified": false,
+  "viewer_error": "PowerBINotLicensedException",
+  "temporary_resources_deleted": true
+}

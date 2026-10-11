@@ -1,0 +1,95 @@
+{
+  "method": "Microsoft Power BI SDK, authenticated CLI token, isolated headless Chromium",
+  "user_browser_controlled": false,
+  "tenant_settings_changed": false,
+  "viewport": {
+    "width": 1680,
+    "height": 1050
+  },
+  "pages": [
+    {
+      "name": "b48bf8ced055e9f97bbc",
+      "displayName": "01 · Management",
+      "visuals": 14,
+      "errors": [],
+      "image": "docs/assets/powerbi/b48bf8ced055e9f97bbc.png"
+    },
+    {
+      "name": "hp_operations",
+      "displayName": "02 · Dagelijkse operaties",
+      "visuals": 13,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_operations.png"
+    },
+    {
+      "name": "hp_terminal",
+      "displayName": "03 · Terminaldetail",
+      "visuals": 15,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_terminal.png"
+    },
+    {
+      "name": "hp_incidents",
+      "displayName": "04 · Verstoringsanalyse",
+      "visuals": 14,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_incidents.png"
+    },
+    {
+      "name": "hp_finance",
+      "displayName": "05 · Financiën",
+      "visuals": 13,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_finance.png"
+    },
+    {
+      "name": "hp_scenarios",
+      "displayName": "06 · Scenario-lab",
+      "visuals": 17,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_scenarios.png"
+    },
+    {
+      "name": "hp_data",
+      "displayName": "07 · Data & methode",
+      "visuals": 6,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_data.png"
+    },
+    {
+      "name": "hp_quality",
+      "displayName": "08 · Datakwaliteit",
+      "visuals": 10,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_quality.png"
+    },
+    {
+      "name": "hp_evidence",
+      "displayName": "09 · Onderbouwing",
+      "visuals": 7,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_evidence.png"
+    },
+    {
+      "name": "hp_decision",
+      "displayName": "10 · Investeringskeuze",
+      "visuals": 7,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_decision.png"
+    },
+    {
+      "name": "hp_pilot",
+      "displayName": "11 · Pilotmeting",
+      "visuals": 10,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_pilot.png"
+    },
+    {
+      "name": "hp_governance",
+      "displayName": "12 · KPI & beheer",
+      "visuals": 6,
+      "errors": [],
+      "image": "docs/assets/powerbi/hp_governance.png"
+    }
+  ]
+}

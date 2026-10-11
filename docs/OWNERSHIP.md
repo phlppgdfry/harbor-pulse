@@ -12,7 +12,7 @@ The repository demonstrates completed artifacts. It does not claim that Philippe
 | Key/version/hash upserts | Retain corrections and prevent double counting | Snapshot reads still scan all inputs |
 | Weighted KPIs and explicit departure coverage | Avoid giving small batches equal importance and missing data zero dwell | More definitions to explain |
 | SQLite and Python standard library | Let reviewers reproduce the core locally | Single writer; no distributed production orchestration |
-| Immutable cloud model snapshots | Avoid destructive overwrite of published push data | Model lifecycle and rebinding require care |
+| Native model with versioned embedded source | Supports typed import, native roles and actual refresh history | Changed source requires explicit release; real source adapter still needed |
 | Pilot before a major investment | Test the intervention instead of monetizing a coefficient | Requires real operational agreement and measurement |
 
 ## Explain before using this as interview evidence

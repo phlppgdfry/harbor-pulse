@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-11T22:21:23.220646+00:00",
+  "source_kind": "synthetic",
+  "model_mutations": false,
+  "status": "passed",
+  "native_source_hash_verified": true,
+  "synthetic": true,
+  "source_fact_difference": 0,
+  "vehicles": 366910,
+  "departure_coverage": 0.994818892916519,
+  "native_refresh_status": "Completed",
+  "native_refresh_start": "2026-10-11T22:21:36.157Z",
+  "native_refresh_end": "2026-10-11T22:21:44.937Z",
+  "source_hash": "60f64d9401c7bf8081c4b193cb78aa364697179aaec3a65231725715ea575ea9",
+  "sla": {
+    "healthy": true,
+    "errors": [],
+    "ingest_age_hours": 1.7222222222222222e-08,
+    "max_age_hours": 26,
+    "synthetic": true,
+    "clock": "verified ingestion time; source event time is never used as freshness proof"
+  },
+  "finished_at": "2026-10-11T22:21:51.139336+00:00"
+}

@@ -24,7 +24,7 @@ This case follows the whole path: source contracts → audited ingestion → a g
 | Analytics / BI engineer | [Pipeline and tests](docs/PIPELINE.md) · [Operating evidence](docs/OPERATIONS.md) · [Implementation status](docs/CONTROL-STATUS.md) |
 | Decision / experiment reviewer | [Management memo](docs/EXECUTIVE-BRIEF.md) · [Robustness checks](docs/ROBUSTNESS.md) · [Pilot pre-registration](docs/PILOT-PREREGISTRATION.md) |
 
-The public walkthrough includes seven reproducible analysis figures and an interactive sensitivity comparison. **These are not Power BI screenshots.** Actual PNG export is disabled by the tenant and PDF export requires dedicated capacity; pixel-level Power BI QA remains blocked. [Export capability evidence](evidence/export-capabilities.json).
+The public walkthrough includes seven reproducible analysis figures and an interactive sensitivity comparison. It now also includes [genuine Power BI screenshots](docs/assets/powerbi/) of all twelve pages, captured through Microsoft’s SDK in an isolated headless CLI session. Pixel review found and fixed clipped text, inactive table measures, undersized slicers and misleading totals. [Render evidence](evidence/powerbi-render.json). The export-to-file API restrictions remain, but they no longer block screenshots or visual QA.
 
 ## Evidence you can inspect
 
@@ -61,13 +61,15 @@ flowchart LR
   I --> W[SQLite canonical events]
   W --> F[Daily facts + reconciliation]
   F --> G{Publication gate}
-  G -->|pass with visible warnings| M[Immutable Power BI model snapshot]
+  G -->|pass with visible warnings| M[Native import model + terminal roles]
   M --> R[12-page report]
   F --> E[Associations + decision assumptions]
   P[Simulated randomized pilot] --> E
   E --> M
   G -->|fail| B[Stop; investigate and replay]
 ```
+
+The active Power BI model is now a [native import model with terminal roles and monitored refresh](docs/NATIVE-OPERATIONS.md). Its typed M partitions embed the governed synthetic source snapshot; this is not a live terminal-system connection. The previous push snapshot is retained in the archive.
 
 The file adapter scans complete snapshots, but database changes are incremental: business key, version and hash determine whether a record is new, corrected, duplicated or conflicting. Watermarks are observable state, not a timestamp-only filter that silently drops backdated corrections. Materialized facts are rebuilt inside the same transaction. [Pipeline design](docs/PIPELINE.md)
 
@@ -107,7 +109,7 @@ The report has 12 pages, 132 report elements and 56 DAX measures across a daily 
 
 Problem framing, source contracts, SQL storage, idempotent ingestion, error quarantine, auditability, reconciliation, dimensional modeling, weighted DAX, scenario reasoning, experimental design, confidence versus assumption uncertainty, and a documented release/recovery process.
 
-It does **not** claim a real operational deployment, actual cost savings, validated causal predictions or production access controls. Workspace/RLS roles are designed; real users/groups are not invented or granted access. CI reproduces the synthetic case weekly; a separate local authenticated API monitor checks the live report and snapshot. Neither performs native source refresh. [Implementation versus design](docs/CONTROL-STATUS.md)
+It does **not** claim a real operational deployment, actual cost savings, validated causal predictions or production access controls. Three native terminal roles are deployed and the explicit report/model access roster is audited. No extra users are granted access. Effective-role viewer rendering remains license-blocked. CI reproduces the synthetic case weekly; a daily local job performs native refresh and reconciliation, with an hourly 26-hour freshness monitor. [Implementation versus design](docs/CONTROL-STATUS.md)
 
 ## Reproduce the case
 
@@ -141,4 +143,4 @@ schemas/      Microsoft PBIR schemas and original license
 build/        generated data, warehouse and private publication receipts (ignored)
 ```
 
-Microsoft JSON schemas are included under their original license in `schemas/LICENSE`. Report geometry is schema-validated; cloud query checks and read-back are separate from pixel-level visual inspection.
+Microsoft JSON schemas are included under their original license in `schemas/LICENSE`. Report geometry, cloud queries, definition read-back and actual pixel rendering are checked separately. [Native operations and remaining limits](docs/NATIVE-OPERATIONS.md).

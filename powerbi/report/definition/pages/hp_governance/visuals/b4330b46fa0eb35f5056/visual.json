@@ -81,14 +81,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "2D"
                 }
               }
             },
@@ -144,7 +144,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Persoonlijke Power BI-workspace; geen extra gebruikersrechten toegekend. Voor een gedeelde productieversie: viewers alleen lezen, builders apart, publicatie door een release-eigenaar. Terminal-RLS vereist echte groepen en een gedeelde workspace; dat is hier een ontwerp, niet uitgerold.",
+                    "value": "Persoonlijke Power BI-workspace; geen extra gebruikersrechten toegekend. Voor een gedeelde productieversie: viewers alleen lezen, builders apart, publicatie door een release-eigenaar. Drie terminalrollen staan in het native model. Admin-API toont alleen de eigenaar. Viewer-tests met effectieve rollen zijn nog licentiegeblokkeerd; geen handhavingstest als geslaagd claimen.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "13pt",

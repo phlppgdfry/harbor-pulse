@@ -1,0 +1,19 @@
+{
+  "viewport": {
+    "width": 1680,
+    "height": 1050
+  },
+  "pages_reviewed": 12,
+  "sdk_errors": 0,
+  "fixes": [
+    "Text box padding avoids clipped titles, hints and footers",
+    "All table measure projections are active",
+    "Scenario dropdowns enlarged",
+    "Table totals disabled where their aggregate semantics are misleading"
+  ],
+  "limits": [
+    "Desktop viewport and selected filter states; not every mobile/report interaction",
+    "Viewer-role render blocked by licensing, separate from owner report rendering"
+  ],
+  "user_browser_controlled": false
+}

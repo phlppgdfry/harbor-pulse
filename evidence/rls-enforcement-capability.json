@@ -1,0 +1,14 @@
+{
+  "roles": [
+    "Terminal_Zeebrugge",
+    "Terminal_Antwerpen",
+    "Terminal_Gent"
+  ],
+  "test_tokens_issued": true,
+  "viewer_render_passed": false,
+  "viewer_errors": [
+    "PowerBINotLicensedException"
+  ],
+  "additional_users_granted": false,
+  "note": "Native role definitions deployed; effective-role viewer rendering is license-blocked. No RLS enforcement pass claimed."
+}

@@ -1,9 +1,15 @@
 {
   "checked_at": "2026-10-11T19:47:34Z",
   "browser_used": false,
-  "png": {"http_status": 403, "message": "Export report to image is disabled on tenant level"},
-  "pdf": {"http_status": 403, "message": "Report requested for export is not on dedicated capacity"},
-  "powerbi_screenshots_available": false,
-  "powerbi_pixel_qa_performed": false,
-  "alternative": "Reproducible evidence figures and a public walkthrough; no screenshot claims"
+  "png": {
+    "http_status": 403,
+    "message": "Export report to image is disabled on tenant level"
+  },
+  "pdf": {
+    "http_status": 403,
+    "message": "Report requested for export is not on dedicated capacity"
+  },
+  "powerbi_screenshots_available": true,
+  "powerbi_pixel_qa_performed": true,
+  "alternative": "Authenticated Microsoft SDK rendering in isolated headless CLI; all twelve pages captured, reviewed and fixed"
 }

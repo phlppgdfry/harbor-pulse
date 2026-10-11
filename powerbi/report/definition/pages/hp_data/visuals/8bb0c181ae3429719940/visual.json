@@ -58,7 +58,8 @@
                 }
               },
               "queryRef": "FactOps.Voertuigen",
-              "nativeQueryRef": "Voertuigen"
+              "nativeQueryRef": "Voertuigen",
+              "active": true
             },
             {
               "field": {
@@ -72,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.Planning",
-              "nativeQueryRef": "Planning"
+              "nativeQueryRef": "Planning",
+              "active": true
             },
             {
               "field": {
@@ -86,7 +88,8 @@
                 }
               },
               "queryRef": "FactOps.Op tijd %",
-              "nativeQueryRef": "Op tijd %"
+              "nativeQueryRef": "Op tijd %",
+              "active": true
             },
             {
               "field": {
@@ -100,7 +103,8 @@
                 }
               },
               "queryRef": "FactOps.Vertraging min",
-              "nativeQueryRef": "Vertraging min"
+              "nativeQueryRef": "Vertraging min",
+              "active": true
             },
             {
               "field": {
@@ -114,7 +118,8 @@
                 }
               },
               "queryRef": "FactOps.Omzet",
-              "nativeQueryRef": "Omzet"
+              "nativeQueryRef": "Omzet",
+              "active": true
             }
           ]
         }
@@ -273,6 +278,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

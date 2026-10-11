@@ -81,14 +81,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "2D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "2D"
                 }
               }
             },
@@ -144,7 +144,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Voor publicatie een rapportdefinitie back-uppen. Nieuw model als snapshot publiceren, DAX controleren, rapport omkoppelen en vorige modellen archiveren. Bij fouten de vorige rapportdefinitie en modelkoppeling herstellen. Geen bronrecords of historische modellen automatisch verwijderen.",
+                    "value": "Voor publicatie een rapportdefinitie back-uppen. Native importmodel eerst valideren: 66 queries, rollen en reconciliatie. Daarna rapport omkoppelen en vorige modellen archiveren. Bij fouten de vorige rapportdefinitie en modelkoppeling herstellen. Geen bronrecords of historische modellen automatisch verwijderen.",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",

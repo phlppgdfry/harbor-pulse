@@ -58,7 +58,8 @@
                 }
               },
               "queryRef": "FactOps.Voertuigen",
-              "nativeQueryRef": "Voertuigen"
+              "nativeQueryRef": "Voertuigen",
+              "active": true
             },
             {
               "field": {
@@ -72,7 +73,8 @@
                 }
               },
               "queryRef": "FactOps.Op tijd %",
-              "nativeQueryRef": "Op tijd %"
+              "nativeQueryRef": "Op tijd %",
+              "active": true
             },
             {
               "field": {
@@ -86,7 +88,8 @@
                 }
               },
               "queryRef": "FactOps.Marge %",
-              "nativeQueryRef": "Marge %"
+              "nativeQueryRef": "Marge %",
+              "active": true
             }
           ]
         }
@@ -228,6 +231,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

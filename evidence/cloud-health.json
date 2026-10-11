@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-11T20:09:40.374714+00:00",
+  "checked_at": "2026-10-11T22:26:01.267146+00:00",
   "browser_used": false,
   "synthetic_model": true,
   "checks": {
@@ -20,21 +20,47 @@
     },
     "refresh_history": {
       "http_status": 200,
-      "entry_count": 0,
-      "failed_entries": 0
+      "entry_count": 3,
+      "failed_entries": 0,
+      "latest_status": "Completed"
     },
     "report_access": {
-      "http_status": 401,
-      "error": {
-        "code": "GroupNotAccessible",
-        "message": "Calling group APIs not permitted for personal workspace"
-      }
+      "http_status": 200,
+      "principal_count": 1,
+      "rights": [
+        "Owner"
+      ]
+    },
+    "model_access": {
+      "http_status": 200,
+      "principal_count": 1,
+      "rights": [
+        "ReadWriteReshareExplore"
+      ]
     }
   },
   "healthy": true,
+  "access_audit": {
+    "single_matching_owner": true,
+    "report_owner_right": true
+  },
+  "refresh_sla": {
+    "last_completed": "2026-10-11T22:21:44.937Z",
+    "age_hours": 0.07261273027777777,
+    "max_age_hours": 26,
+    "healthy": true
+  },
+  "ingest_sla": {
+    "healthy": true,
+    "errors": [],
+    "ingest_age_hours": 0.07089051416666667,
+    "max_age_hours": 26,
+    "synthetic": true,
+    "clock": "verified ingestion time; source event time is never used as freshness proof"
+  },
   "limits": [
-    "Push snapshot health is checked; no conventional source refresh is performed.",
-    "Access API denial is a capability limit, not evidence that no other user has access.",
+    "Embedded source is synthetic and versioned, not a live operational system.",
+    "Native terminal roles exist; viewer enforcement remains license-blocked.",
     "Local scheduler depends on this computer and authenticated CLI."
   ]
 }
