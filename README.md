@@ -14,6 +14,10 @@ Case release **HP-2026.2** · 13 model tables · 56 measures · 12 pages · 132 
 
 This case follows the whole path: source contracts → audited ingestion → a governed star model → Power BI → an investment comparison → a pilot design. All organizations, records, costs and outcomes are fictitious. The cover is an evidence figure generated from the code, not a Power BI screenshot. Developed with AI assistance; the repository exposes the logic, assumptions and checks for review.
 
+## Nederlandstalig leren en voorbereiden
+
+[**Kennisgids**](docs/KENNISGIDS-NL.md): termen, processen en handberekening · [**Interviewbank**](docs/INTERVIEWBANK-NL.md): 12 HR-vragen en 30 seniorvragen met antwoordrichtingen · [**Zelfstandige demonstratie**](docs/DEMONSTRATIE-NL.md): vier lokale opdrachten met een uitvoerbare verificatiehelper. Een helperrun is geen bewijs dat de portfolio-eigenaar de oefening zelfstandig heeft uitgevoerd.
+
 ## Review in 30 seconds
 
 **Problem:** reduce terminal delay without hiding bad data or overstating cash savings.

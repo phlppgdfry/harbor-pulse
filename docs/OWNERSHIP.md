@@ -35,3 +35,7 @@ Avoid claiming actual savings, real stakeholder leadership, production RLS or se
 ## Interview exercise
 
 Change departure coverage from 99% to 99.9%, show the resulting publication decision, then explain whether the threshold is operationally appropriate. This tests understanding of policy versus arithmetic rather than memorization.
+
+## Dutch learning and interview route
+
+Start with the [Dutch knowledge guide](KENNISGIDS-NL.md), prepare with the [HR/senior interview bank](INTERVIEWBANK-NL.md), then perform the [independent demonstration](DEMONSTRATIE-NL.md). The helper validates local reference outputs; personal mastery must be assessed through actual explanation and live changes.

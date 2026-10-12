@@ -40,6 +40,7 @@ def check(root=ROOT):
             ["uv", "run", "--locked", "python", "-m", "unittest", "discover", "-s", "tests"],
             ["uv", "run", "--locked", "python", "-m", "harbor_pulse", "demo"],
             ["uv", "run", "--locked", "python", "scripts/check_evidence.py"],
+            ["uv", "run", "--locked", "python", "scripts/practice_demo.py"],
             ["uv", "run", "--locked", "python", "scripts/audit_case.py"],
             ["uv", "run", "--locked", "python", "scripts/check_report_accessibility.py"],
             ["uv", "run", "--locked", "python", "scripts/build_native_model.py"],

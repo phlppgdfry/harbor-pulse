@@ -35,3 +35,5 @@ This is Philippe's portfolio project, developed with substantial AI implementati
 Useful questions: Why is punctuality weighted? Why is the realizable fraction necessary? Why do watermarks not filter ingestion? What breaks a causal interpretation? What would change with persistent lane assignment? How would you handle a failed deployment?
 
 [Interview preparation and ownership](OWNERSHIP.md) gives an honest discussion guide.
+
+Dutch preparation: [knowledge guide](KENNISGIDS-NL.md), [interview bank](INTERVIEWBANK-NL.md) and [independent demonstration](DEMONSTRATIE-NL.md).

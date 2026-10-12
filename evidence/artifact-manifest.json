@@ -20,7 +20,7 @@
   "artifacts": [
     {
       "path": "README.md",
-      "sha256": "245d38b40f647e805da75c37139f81de6b09ba00814f03d225c50ca1cbb53a59"
+      "sha256": "66cda37b35e37e973df8c51bf5d5f2f89315435de6bd5a962c5afd5c3ddcbdc0"
     },
     {
       "path": "contracts/case-release.json",
@@ -67,6 +67,10 @@
       "sha256": "6639b5d97ab258c21cb27a7b382a1a9e5e0b33387560dda0466116e1aad01569"
     },
     {
+      "path": "docs/DEMONSTRATIE-NL.md",
+      "sha256": "d7c0dec5a37c94d97c107d062820e9aaf306ac32af7aa78b55ac1c0de855e948"
+    },
+    {
       "path": "docs/DEVELOPMENT.md",
       "sha256": "c641fb6e666c2a605b44e3125ae6124e0b4920bd01f2ecac4e6dee9a75a2fc57"
     },
@@ -77,6 +81,14 @@
     {
       "path": "docs/HP-2026.2-DELIVERY.md",
       "sha256": "d7b58301700fa282668da39bdee557a0d57a42f6766456219fe5214c9ee3debf"
+    },
+    {
+      "path": "docs/INTERVIEWBANK-NL.md",
+      "sha256": "a610e0fa0fd2a3b5b430623ac78519a86c94ce7140d3d809b83f2ae071984536"
+    },
+    {
+      "path": "docs/KENNISGIDS-NL.md",
+      "sha256": "d08c192ec2b6e85890ca306a99b61b395c38f0c590ee0479befefed9be778675"
     },
     {
       "path": "docs/KPI-CONTRACTS.md",
@@ -92,7 +104,7 @@
     },
     {
       "path": "docs/OWNERSHIP.md",
-      "sha256": "22e63c473f81b43c09c0aa5cd61e67979a6c6dbed8d1b8e5610875543a406839"
+      "sha256": "98bff675b8696f90bd8d0a4a8342c2026716229993258b3180af34e1cc6760f3"
     },
     {
       "path": "docs/PILOT-PREREGISTRATION.md",
@@ -112,7 +124,7 @@
     },
     {
       "path": "docs/RECRUITER-TOUR.md",
-      "sha256": "74fd3725af3216980b99c92002233ef19ac7d77c16397d7c1e7973cd4d6044c7"
+      "sha256": "1c6eab0675606a96fe6d3754e6e593c2fb31a659cadcd07877f6c9c187092d5d"
     },
     {
       "path": "docs/RELEASE-CONTROLS.md",
@@ -232,7 +244,7 @@
     },
     {
       "path": "docs/index.html",
-      "sha256": "bab519673f476753e466e14be837e776ff1e4322d5e0310bdcc6076c702d9d67"
+      "sha256": "1b3f9345fa60e6bfe59678b4e2360454dd1bb1ab89f0cd1cf5213cca45023439"
     },
     {
       "path": "evidence/access-audit.json",
