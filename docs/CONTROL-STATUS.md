@@ -21,3 +21,9 @@ This case demonstrates an end-to-end analytical operating model. It does not lab
 ## Recruiter release evidence
 
 Public walkthrough, narrated 120-second video, captions, one-page PDF, SQL/DAX examples and role-based review routes are included. Headless desktop/mobile website QA is separate from Power BI pixel QA. See [the 15-point delivery ledger](DELIVERY-STATUS.md), [live health](../evidence/cloud-health.json), [recovery drill](../evidence/recovery-drill.json) and [export capability checks](../evidence/export-capabilities.json).
+
+## HP-2026.2 strengthened controls
+
+Automatic existing-report rollback now verifies complete definitions and original binding; an isolated live copy exercises an injected verification failure. Offline publication/refresh faults fail closed and preserve verified state. An explicit case contract and artifact registry check headline claims and artifact identity in CI. A clean git-archive installation is reproduced in an isolated environment. Six assumption challenges and independent hand calculations are included. Website accessibility is automatically checked; report alt text, reading order and markers are supplied. See [control evidence and exact boundaries](RELEASE-CONTROLS.md), [data fitness](DATA-FITNESS.md) and [the challenges](ASSUMPTION-CHALLENGES.md).
+
+**Still unverified:** effective-role viewer rendering remains license-blocked; complete assistive-technology/user accessibility testing and real production source operations are not claimed. Expanded interaction results describe the tested owner session only.

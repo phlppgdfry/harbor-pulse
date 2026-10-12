@@ -7,7 +7,7 @@
     "z": 65,
     "width": 970,
     "height": 250,
-    "tabOrder": 64
+    "tabOrder": 9
   },
   "visual": {
     "visualType": "lineChart",
@@ -220,6 +220,48 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Datum, Vertraging incident, Vertraging regulier. Synthetic portfolio data; inspect labels and values, not color alone.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "lineStyles": [
+        {
+          "properties": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showMarkerByDefault": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "markerSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }

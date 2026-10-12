@@ -7,7 +7,7 @@
     "z": 108,
     "width": 1552,
     "height": 245,
-    "tabOrder": 107
+    "tabOrder": 6
   },
   "visual": {
     "visualType": "tableEx",
@@ -216,6 +216,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Regel, Aantal, Afhandeling, Ernst. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

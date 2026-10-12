@@ -7,7 +7,7 @@
     "z": 106,
     "width": 370,
     "height": 116,
-    "tabOrder": 105
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "cardVisual",
@@ -138,6 +138,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Voertuigen. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

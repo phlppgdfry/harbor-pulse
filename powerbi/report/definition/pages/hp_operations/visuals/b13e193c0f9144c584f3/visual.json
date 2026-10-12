@@ -7,7 +7,7 @@
     "z": 47,
     "width": 562,
     "height": 286,
-    "tabOrder": 46
+    "tabOrder": 9
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -206,6 +206,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Weekdag, Volume per terminaldag. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

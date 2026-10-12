@@ -1,5 +1,9 @@
 # Harbor Pulse
 
+<!-- case-claim: {"case_version":"HP-2026.2","synthetic":true,"metrics":{"vehicles":366910,"fact_rows":1095,"late_corrections":36,"duplicates":216,"source_fact_difference":0,"report_pages":12,"report_elements":132,"model_tables":13,"measures":56},"recommendation":"Pilot dispatch first under invented assumptions; do not claim realized savings.","rls_viewer_status":"license-blocked"} -->
+
+Case release **HP-2026.2** · 13 model tables · 56 measures · 12 pages · 132 report elements.
+
 **From messy terminal events to defensible decisions.** A reproducible analytics case for a fictional terminal network in Zeebrugge, Antwerpen and Gent.
 
 [![Verify the case](https://github.com/phlppgdfry/harbor-pulse/actions/workflows/verify.yml/badge.svg)](https://github.com/phlppgdfry/harbor-pulse/actions/workflows/verify.yml)
@@ -149,3 +153,7 @@ Microsoft JSON schemas are included under their original license in `schemas/LIC
 ## Development quality
 
 Python dependencies are locked with uv; Ruff, branch coverage, Hypothesis, pre-commit, Gitleaks, SQLite SQLFluff and committed Playwright checks run locally and in CI. See [setup, commands and test boundaries](docs/DEVELOPMENT.md). Browser QA produces desktop/mobile screenshot artifacts without taking over a signed-in browser.
+
+## Challenge this case
+
+[Data fitness and hand calculations](docs/DATA-FITNESS.md) explain what batch data can establish and which vehicle-level questions it cannot answer. [Six assumption challenges](docs/ASSUMPTION-CHALLENGES.md) expose investment reversal thresholds, cost/time dependence, selective missingness, changing periods, priority weights and useful-versus-significant pilot outcomes. [Release and evidence controls](docs/RELEASE-CONTROLS.md) describe verified rollback, duplicate prevention, clean-checkout reproduction, accessibility and the remaining RLS viewer limit.

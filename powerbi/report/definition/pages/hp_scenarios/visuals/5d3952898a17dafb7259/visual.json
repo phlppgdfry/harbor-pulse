@@ -7,7 +7,7 @@
     "z": 80,
     "width": 370,
     "height": 104,
-    "tabOrder": 79
+    "tabOrder": 7
   },
   "visual": {
     "visualType": "slicer",
@@ -171,6 +171,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Keuze. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

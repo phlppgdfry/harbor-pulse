@@ -7,7 +7,7 @@
     "z": 125,
     "width": 970,
     "height": 320,
-    "tabOrder": 124
+    "tabOrder": 5
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -225,6 +225,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Groep, Pilot gemiddelde min, Periode. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

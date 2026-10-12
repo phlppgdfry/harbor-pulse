@@ -7,7 +7,7 @@
     "z": 109,
     "width": 1552,
     "height": 215,
-    "tabOrder": 108
+    "tabOrder": 7
   },
   "visual": {
     "visualType": "tableEx",
@@ -306,6 +306,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Run, Status, Nieuw, Correcties, Duplicaten, Afgekeurd, FactRijen, BronVoertuigen, FactVoertuigen, Verschil. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

@@ -7,7 +7,7 @@
     "z": 75,
     "width": 970,
     "height": 286,
-    "tabOrder": 74
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "lineChart",
@@ -220,6 +220,48 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Maand, Marge %, Doel marge. Synthetic portfolio data; inspect labels and values, not color alone.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "lineStyles": [
+        {
+          "properties": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showMarkerByDefault": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "markerSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }

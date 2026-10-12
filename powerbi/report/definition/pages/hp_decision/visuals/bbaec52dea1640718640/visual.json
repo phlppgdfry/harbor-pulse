@@ -7,7 +7,7 @@
     "z": 117,
     "width": 970,
     "height": 340,
-    "tabOrder": 116
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -234,6 +234,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Optie, Netto jaar P10, Netto jaar P50, Netto jaar P90. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

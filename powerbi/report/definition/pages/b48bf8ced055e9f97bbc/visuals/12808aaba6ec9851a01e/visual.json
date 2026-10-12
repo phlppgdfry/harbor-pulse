@@ -7,7 +7,7 @@
     "z": 38,
     "width": 970,
     "height": 260,
-    "tabOrder": 37
+    "tabOrder": 9
   },
   "visual": {
     "visualType": "lineChart",
@@ -230,6 +230,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Maand, Voertuigen, Terminal. Synthetic portfolio data; inspect labels and values, not color alone.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "objects": {
@@ -247,6 +260,33 @@
               "expr": {
                 "Literal": {
                   "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showMarkerByDefault": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "markerSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }

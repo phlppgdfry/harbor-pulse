@@ -56,10 +56,23 @@ def main():
     assert all(gate["checks"].values()), gate
     model = json.loads((args.run / "model.json").read_text())
     tables = json.loads((args.run / "tables.json").read_text())
+    # Persist intent before the non-idempotent request. A timeout can mean the server
+    # created the model; retries require human/API reconciliation, never another create.
+    receipt.parent.mkdir(parents=True, exist_ok=True)
+    receipt.write_text(
+        json.dumps(
+            {
+                "status": "creation_pending",
+                "name": model["name"],
+                "instruction": "Reconcile cloud inventory before any retry",
+            },
+            indent=2,
+        )
+    )
     d = call("https://api.powerbi.com/v1.0/myorg/datasets", "post", model, "powerbi")
     created = d["text"]
     assert created.get("id"), d
-    receipt.write_text(json.dumps(created, indent=2))
+    receipt.write_text(json.dumps({**created, "status": "loading"}, indent=2))
     model_id = created["id"]
     for name, rows in tables.items():
         call(
@@ -70,6 +83,7 @@ def main():
             ROOT / "build" / f"published-{name}.private.json",
         )
         print(f"Published {name}: {len(rows)} rows", flush=True)
+    receipt.write_text(json.dumps({**created, "status": "complete"}, indent=2))
     print("Published model snapshot:", model_id)
 
 

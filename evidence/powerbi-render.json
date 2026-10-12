@@ -1,4 +1,6 @@
 {
+  "case_version": "HP-2026.2",
+  "checked_at": "2026-10-12T01:22:12.258Z",
   "method": "Microsoft Power BI SDK, authenticated CLI token, isolated headless Chromium",
   "user_browser_controlled": false,
   "tenant_settings_changed": false,

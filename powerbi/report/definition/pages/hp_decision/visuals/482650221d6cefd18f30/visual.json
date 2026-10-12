@@ -7,7 +7,7 @@
     "z": 120,
     "width": 562,
     "height": 318,
-    "tabOrder": 119
+    "tabOrder": 5
   },
   "visual": {
     "visualType": "textbox",
@@ -116,6 +116,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Report explanation or navigation. Synthetic portfolio case; no realized business impact claimed.'"
                 }
               }
             }

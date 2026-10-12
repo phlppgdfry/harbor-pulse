@@ -121,6 +121,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Report explanation or navigation. Synthetic portfolio case; no realized business impact claimed.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "objects": {

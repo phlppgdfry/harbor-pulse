@@ -7,7 +7,7 @@
     "z": 112,
     "width": 760,
     "height": 325,
-    "tabOrder": 111
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "tableEx",
@@ -186,6 +186,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Factor, DelayAssociationMinutes. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

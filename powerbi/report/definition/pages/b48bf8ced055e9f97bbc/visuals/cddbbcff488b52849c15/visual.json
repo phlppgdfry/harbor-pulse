@@ -144,6 +144,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal. Synthetic portfolio data; inspect labels and values, not color alone.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "objects": {

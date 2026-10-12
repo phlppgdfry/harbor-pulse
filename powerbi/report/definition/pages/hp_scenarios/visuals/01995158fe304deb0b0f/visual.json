@@ -7,7 +7,7 @@
     "z": 86,
     "width": 772,
     "height": 260,
-    "tabOrder": 85
+    "tabOrder": 13
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -220,6 +220,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Vertraging min, Scenario vertraging min. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

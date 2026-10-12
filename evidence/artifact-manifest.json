@@ -1,0 +1,970 @@
+{
+  "claim": {
+    "case_version": "HP-2026.2",
+    "synthetic": true,
+    "metrics": {
+      "vehicles": 366910,
+      "fact_rows": 1095,
+      "late_corrections": 36,
+      "duplicates": 216,
+      "source_fact_difference": 0,
+      "report_pages": 12,
+      "report_elements": 132,
+      "model_tables": 13,
+      "measures": 56
+    },
+    "recommendation": "Pilot dispatch first under invented assumptions; do not claim realized savings.",
+    "rls_viewer_status": "license-blocked"
+  },
+  "provenance": "Reviewed release inventory; changing hashes requires explicit re-registration and review. SDK receipts establish renderer origin; hashes establish identity, not image contents.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "245d38b40f647e805da75c37139f81de6b09ba00814f03d225c50ca1cbb53a59"
+    },
+    {
+      "path": "contracts/case-release.json",
+      "sha256": "6c503d64e935a77498b1436be86f7b1508d14cb9f2549134a812e4fdf3022896"
+    },
+    {
+      "path": "contracts/source-contracts.json",
+      "sha256": "5ac6d4fe3de2b610e8f64c4b5766367af9b026ce4adaa829acbf974774eb1248"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/ANALYSIS.md",
+      "sha256": "43fb4f7e6c1d37ce5449c4bb6dfb92adfe92010095f26ccfda38448913e2473b"
+    },
+    {
+      "path": "docs/ASSUMPTION-CHALLENGES.md",
+      "sha256": "83f40bf4677ff9c24844524e996457a2c1bc5d129886cf7238bd0e597d2797f3"
+    },
+    {
+      "path": "docs/CASE.md",
+      "sha256": "af12addf465a337cf73774c30bc9bfff15dc7b44fd754cdc301864d6627ccac5"
+    },
+    {
+      "path": "docs/CONTROL-STATUS.md",
+      "sha256": "cae2162ca9a2d246497f678d12c78d68dbb7d7dc709f5998d424dc00c63fb54d"
+    },
+    {
+      "path": "docs/DATA-FITNESS.md",
+      "sha256": "4dcc4c7fa7f68e88d21f5e246421c5fdc3f333272ce46825c8ee38705df711d9"
+    },
+    {
+      "path": "docs/DAX-EXAMPLES.md",
+      "sha256": "0a56080515f49a724f1cfed5aaaf82a2066d083d288abc2f6f29a26028467de4"
+    },
+    {
+      "path": "docs/DECISION.md",
+      "sha256": "c664b0f95547e66475664e478629ca95cb567e3f56ae4f8aa70ef31b003e0d07"
+    },
+    {
+      "path": "docs/DELIVERY-STATUS.md",
+      "sha256": "6639b5d97ab258c21cb27a7b382a1a9e5e0b33387560dda0466116e1aad01569"
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "sha256": "c641fb6e666c2a605b44e3125ae6124e0b4920bd01f2ecac4e6dee9a75a2fc57"
+    },
+    {
+      "path": "docs/EXECUTIVE-BRIEF.md",
+      "sha256": "77dc63c775578e65f4fe3dcbd6c4b03c5673d7bfe69d48a46f91a2993909f4de"
+    },
+    {
+      "path": "docs/HP-2026.2-DELIVERY.md",
+      "sha256": "d7b58301700fa282668da39bdee557a0d57a42f6766456219fe5214c9ee3debf"
+    },
+    {
+      "path": "docs/KPI-CONTRACTS.md",
+      "sha256": "e1cdc9edfe24bf32a40aabec33d4761511b2061c2fd11d68be742df29db1fc9e"
+    },
+    {
+      "path": "docs/NATIVE-OPERATIONS.md",
+      "sha256": "7dc83f5c7fb43c3b5a348b5705716f74806c2f412bba007f31efb5aadb0efaeb"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha256": "3441b41ed59ef874d9f9d8742c209b966325a4a8418db3b34d59f5a7b1c6e9cc"
+    },
+    {
+      "path": "docs/OWNERSHIP.md",
+      "sha256": "22e63c473f81b43c09c0aa5cd61e67979a6c6dbed8d1b8e5610875543a406839"
+    },
+    {
+      "path": "docs/PILOT-PREREGISTRATION.md",
+      "sha256": "7b411a1cd1a7d1fa35939001f3b76d3c6fefd001712b5b62f6a2ad4cccad7369"
+    },
+    {
+      "path": "docs/PILOT.md",
+      "sha256": "3df24d404b72d54279722ad6ffac7a7ff0775106fd709fcfb1f916f4a8adc9d2"
+    },
+    {
+      "path": "docs/PIPELINE.md",
+      "sha256": "8c55c0c24de95bb0a515cb649cbcfdf1c051355824d717243d7130e602c4ae2a"
+    },
+    {
+      "path": "docs/POWER-BI.md",
+      "sha256": "a493d564d3f1847acf8c7dadab0e8c0fb7759b00c698d67555caaba60aedcdd6"
+    },
+    {
+      "path": "docs/RECRUITER-TOUR.md",
+      "sha256": "74fd3725af3216980b99c92002233ef19ac7d77c16397d7c1e7973cd4d6044c7"
+    },
+    {
+      "path": "docs/RELEASE-CONTROLS.md",
+      "sha256": "410cfd6e563f417139a28467ac905d87c6234b67c1497d8ebc3efaacde02f697"
+    },
+    {
+      "path": "docs/ROBUSTNESS.md",
+      "sha256": "501f99a1ac6ee3a934f4bd32be589a0181e066c0b7e865e84895ce37ada675c1"
+    },
+    {
+      "path": "docs/VIDEO-TRANSCRIPT.md",
+      "sha256": "f66367c4b061795ade973540cfc38c23433978f600ba47ea99c5a75caff26a27"
+    },
+    {
+      "path": "docs/assets/case-cover.png",
+      "sha256": "0dda55476153f9eeb268f202a415869f4862471dee934533aa3e0e621c403f5b"
+    },
+    {
+      "path": "docs/assets/case-cover.svg",
+      "sha256": "4b668fd6ab4433f0fb73d0b32e4ff860cba20033c5c9366bde9d714facae77c7"
+    },
+    {
+      "path": "docs/assets/decision.png",
+      "sha256": "4a9bd810dead1b9f38e7802242382525c61c7b1ea8777cf7c74af0cb045aebfd"
+    },
+    {
+      "path": "docs/assets/diagnostics.png",
+      "sha256": "6250088a13160eedeaaff9cabb3e2796ba5828652b895792ed52abfba3d2ce62"
+    },
+    {
+      "path": "docs/assets/harbor-pulse-walkthrough.mp4",
+      "sha256": "2ae5fcb736b88b39760be9449afed0aac0646231a66191d68faa4fcc2e28fa16"
+    },
+    {
+      "path": "docs/assets/operations.png",
+      "sha256": "4956e174224fe49c08bfe88fab513ac88f10270e0dd2ae6688d2a953d3456e8d"
+    },
+    {
+      "path": "docs/assets/pilot-planning.png",
+      "sha256": "71de515bf8dc39fe4df5e35c815478b40bf8d9083237cb98d23cc3bcd953a5ee"
+    },
+    {
+      "path": "docs/assets/pilot.png",
+      "sha256": "289032100e2f9ecb2589532f1a4605c2b0e71d2f49a969569e41a5d3ab239943"
+    },
+    {
+      "path": "docs/assets/powerbi/b48bf8ced055e9f97bbc.png",
+      "sha256": "1f700abbfa254ba05d4964b69a74c4f24e6fe185345699c9770ee328549e79e0"
+    },
+    {
+      "path": "docs/assets/powerbi/filtered-antwerpen-april.png",
+      "sha256": "df6ef3eaa9fa83baaf3451af2f571aaa0ed945bb56b6c2f5798aadc917566752"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_data.png",
+      "sha256": "4d182054616484306001cfa8407288a2a9fa8df96f67bef8940a8d96d1a247ec"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_decision.png",
+      "sha256": "82f6252dff8bdf4fc0c08e2e3502d43fef16aaa3a03d72d01f445fdf299b63e4"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_evidence.png",
+      "sha256": "a5c030bc1f7d6c1ad7f2c17a8c4f12f1ac79a67424b8b6bde44337dcf32d4274"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_finance.png",
+      "sha256": "e248711ffd950d0993354e2a4e316b21717d15c6f16df2587b9dae2a65eada93"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_governance.png",
+      "sha256": "19b980b5bd1d45124538f82f2f1d08922ee3986425c439edc26862204913b22d"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_incidents.png",
+      "sha256": "44853c3a42a382b8006cd4b47317f626644aedcc30c1be33798a6b215b43c3f5"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_operations.png",
+      "sha256": "2c351c1e43c8d90521b314bf04379ced09c6e33faff0dc55c778295217e88926"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_pilot.png",
+      "sha256": "371f9ba0639d544c69fed0e206e239cc6b66bf185066aaa69cc7f14d2c0836a0"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_quality.png",
+      "sha256": "ed8c60eebe74e65469dbea563b6f2cceef532d23d81c18252b19f919d5037549"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_scenarios.png",
+      "sha256": "b38eb74d88b874cf37f83ec39978d164256eee4a9c8ec92e54fc5f2f2845da35"
+    },
+    {
+      "path": "docs/assets/powerbi/hp_terminal.png",
+      "sha256": "4893f2bdf1f20ab62eb7f8d62f35e0b64e7b0e54520dd57a1fa6a9ed233268a2"
+    },
+    {
+      "path": "docs/assets/powerbi/scenario-extreme.png",
+      "sha256": "82aefb944f0bb788b8bb6ef164c0b76fdfcf1b7d19c879475fb571c98594dd86"
+    },
+    {
+      "path": "docs/assets/quality.png",
+      "sha256": "597038f519676d44736b21276db6764b24c0371bf526516d5ddf74fa3f3e3303"
+    },
+    {
+      "path": "docs/assets/sensitivity.json",
+      "sha256": "b9af357df2f960aab506d7139a771a45dc299f3fbf600d2877e95dac5ca90c92"
+    },
+    {
+      "path": "docs/assets/sensitivity.png",
+      "sha256": "909c720a46ce65fbcfc73afc50d96e7220da211968cfc2f26a7a6d9d3a4cc944"
+    },
+    {
+      "path": "docs/assets/walkthrough-en.vtt",
+      "sha256": "36d654469ea6cf97fca4ca6caa150cbcf21adedef5d35cc742417217d808b5c2"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "bab519673f476753e466e14be837e776ff1e4322d5e0310bdcc6076c702d9d67"
+    },
+    {
+      "path": "evidence/access-audit.json",
+      "sha256": "542a849b84966f825d85b00056ffe7ebbc48bd0f55aced6d4bbbf94b0864884f"
+    },
+    {
+      "path": "evidence/associations.json",
+      "sha256": "f49fb019d0c8c19e29c20339ccc365ae58f1feb5d810b2abf6067de31b9225f1"
+    },
+    {
+      "path": "evidence/automatic-rollback-drill.json",
+      "sha256": "6aee14034fe0d9a8f5793e8e93f6cf89a050e8cadc720e638c0b5d7660eb27dc"
+    },
+    {
+      "path": "evidence/automatic-rollback-release.json",
+      "sha256": "2823847845e0bfd81fae8652373aede8078cc6e4b12abd879b378873979b250e"
+    },
+    {
+      "path": "evidence/challenge.json",
+      "sha256": "e01117a9ef7fe06d789a1bf0cee5a620379e743564c9481362d2f0fde9dc68d5"
+    },
+    {
+      "path": "evidence/cloud-health.json",
+      "sha256": "d3a71a12a0c37e5446023c15525fa89606ae4b84432eb213b5f5f6b5354c4287"
+    },
+    {
+      "path": "evidence/decisions.json",
+      "sha256": "f47aa3123c7ae3847176ade6aa6815a52ab5ec3fbbdc88f30f0784087355f5e9"
+    },
+    {
+      "path": "evidence/diagnostics.json",
+      "sha256": "b321358813d7e143febec61fa322e1eb9666550841604c65b8a8bfb9d7cb52c4"
+    },
+    {
+      "path": "evidence/export-capabilities.json",
+      "sha256": "c698de23be15528d6a5ea7d04107ba117d25f22019c1b4751eaa20e9223b3e71"
+    },
+    {
+      "path": "evidence/gate.json",
+      "sha256": "2640391f76874d126024140cda653418b0ae889e1027ac66432d4fa34a494aa3"
+    },
+    {
+      "path": "evidence/loads.json",
+      "sha256": "f2e12238399f2176d2b080b270d1a08b316f91a6869b6f5a048d728ba72221ee"
+    },
+    {
+      "path": "evidence/native-refresh.json",
+      "sha256": "d980bde74be6a7e0d513d1169885eb978174130e2c3c83d4f7c769d5d1677599"
+    },
+    {
+      "path": "evidence/native-security-capability.json",
+      "sha256": "e1707429cd9fbe15d8e8f16bd80ed809f38b866fea575b7048b477477c2a5da2"
+    },
+    {
+      "path": "evidence/pilot-planning.json",
+      "sha256": "ff3e399b86acc49bc2a7c5828f6130b8c389aea89c6ad9fdf059254aec7246b3"
+    },
+    {
+      "path": "evidence/pilot.json",
+      "sha256": "619c31a43cdcc1c1983545ef61d6c40dc78973b50278fa9f2c0e2a827388e792"
+    },
+    {
+      "path": "evidence/pixel-fix-release.json",
+      "sha256": "89c04099482172a7c060480f7c9af1769c36d3113d39e4e84dc4d2c0566210ca"
+    },
+    {
+      "path": "evidence/powerbi-expanded-interactions.json",
+      "sha256": "6bebc508c2b9f6aa0f4157749c6d29800923edc01e2b3c809ab2f5618340c792"
+    },
+    {
+      "path": "evidence/powerbi-interaction.json",
+      "sha256": "3bc860171ea9558796191a5b355d880fdcf280df00003f7f1ac2ac14be8c55a8"
+    },
+    {
+      "path": "evidence/powerbi-pixel-qa.json",
+      "sha256": "d204d0d117286672980b10b95e392a534332dc3053ac16d4b898cdd7ea54ce96"
+    },
+    {
+      "path": "evidence/powerbi-render.json",
+      "sha256": "2de2463370c3a79970dfb5c396bce9c4bfee18933064402996fdea3fb683e339"
+    },
+    {
+      "path": "evidence/powerbi-verification.json",
+      "sha256": "1a158e87808310caee987b370819bed21845f088fbb6a48daf7ce90dfab9d52f"
+    },
+    {
+      "path": "evidence/recovery-drill.json",
+      "sha256": "57f23417f8d644b984bc70d130a9629cee92dcb22b8a135d4dadf5037e2991dd"
+    },
+    {
+      "path": "evidence/release-verification.json",
+      "sha256": "229315940cbc6d143fc3e7d7f1bdafdab7107854ed215b2cb560144af86d4e80"
+    },
+    {
+      "path": "evidence/report-release-control.json",
+      "sha256": "2d789ca74ae504a8f20b1fdbc3d7eb8c199227d97f9f8f04b951dc924c65a1f4"
+    },
+    {
+      "path": "evidence/rls-definition.json",
+      "sha256": "37ff6fbd1a3e29fd21c8ddc12fd86d8e8180b1ef542a34228dcac346fcdbfaf3"
+    },
+    {
+      "path": "evidence/rls-enforcement-capability.json",
+      "sha256": "d0c6bbb43abcb4c4e06f5633bc052fe416f49f7f7834ae30d52abe4a67873209"
+    },
+    {
+      "path": "evidence/security-cleanup.json",
+      "sha256": "9a4043db4c31ba9da4b18f087eef43f2fbcde8615bd25e3808985ad3762acca4"
+    },
+    {
+      "path": "evidence/sensitivity.json",
+      "sha256": "b9af357df2f960aab506d7139a771a45dc299f3fbf600d2877e95dac5ca90c92"
+    },
+    {
+      "path": "evidence/summary.json",
+      "sha256": "58761560a4697b5afce4fff903c3c86001ff287bccbdd0b0d06b3e48928b9705"
+    },
+    {
+      "path": "evidence/web-qa.json",
+      "sha256": "61a97c44921c1d7b63966642fc94a7c28e07995300a4bf5d142f3658d55e9022"
+    },
+    {
+      "path": "fixtures/hand-calculated.json",
+      "sha256": "fef32b7a549a843f863d61e41154748f3d591d4cd0487c3f4857e7aa638cf31a"
+    },
+    {
+      "path": "output/pdf/harbor-pulse-recruiter-brief.pdf",
+      "sha256": "058709752923f04ef816d34fd1eda973274893db526112d240e14d1b19dd5e39"
+    },
+    {
+      "path": "powerbi/native/model.bim",
+      "sha256": "02bbc24026e42ef341dd9f071d2663996fbc9798d0f56a6e70c53d25e9413575"
+    },
+    {
+      "path": "powerbi/report/StaticResources/RegisteredResources/Custom6165337428829631.json",
+      "sha256": "bf89a291622f8002d2cb6739b054f66aaaaa3025daff1fd477296bc492428ae5"
+    },
+    {
+      "path": "powerbi/report/StaticResources/SharedResources/BaseThemes/Fluent2-CY26SU10.json",
+      "sha256": "6088479c0b7350d0fbe36b6da6f3d0eecf472c95da235ce4ac0e15c1f2290357"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/page.json",
+      "sha256": "b9e4a9eca56e4ef8e72958734930c54d2b6810e57278f9097b1199bd3ca6e3e2"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/000f0e69d4028cf204c5/visual.json",
+      "sha256": "e20abfeaa3e76e2a373758a565aeb97f9882a1c1c996fccba4714f078a7ad506"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/12808aaba6ec9851a01e/visual.json",
+      "sha256": "dcc7aef1a21529b31ecb3afe546ca8ed2b82d1c75b6b0789c0d9f486f0317e9b"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/1b1bf876c5ffc795d45e/visual.json",
+      "sha256": "b52e3d04a4d0707ac12ebf00c2aac3193f9d8c153f3b82958fe96a6a0e6af3dc"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/414548f85bb058476569/visual.json",
+      "sha256": "92cb04d047d92c9de2a48ad27025bcdfad012822cdde94e831bad580da3d1ab4"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/5532b5b5567b3de5eb7c/visual.json",
+      "sha256": "55eb09860f1e25bcd94b53b9b77c98f3190c083f9f8075301aab346a6387d1de"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/5d2156ce37e4915aac5e/visual.json",
+      "sha256": "37b5afb1f9bc2778b787c404995204a9eebeb46feabe5c743ce530a3bb874d7d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/61211d11c21220ac2960/visual.json",
+      "sha256": "7ac8861ec1897c5047dc8ba760864deb42290834ab2c15538a2b922498958b74"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/662f4bccf10eaf416d05/visual.json",
+      "sha256": "b3e9cface9725340137402a9feb88f42f2122510094483c01162fa51385fa141"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/8229bc7086983af1d38c/visual.json",
+      "sha256": "02cb403be20c8db9d07e00213cf7ba386dfbea2c6d8b9acc0ccf2ea8cf5d1134"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/9c4ac8de931fa992f140/visual.json",
+      "sha256": "d015c5f4f82214b3e2bc9767ce443900c5252c98d8ab28649c59155c412d9499"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/cc613de06b06ffae2389/visual.json",
+      "sha256": "f13b39cd7d4fdaf5c85e69b34e10e15626991dbb2255046c3f2b605f4e83e51e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/cddbbcff488b52849c15/visual.json",
+      "sha256": "79a9dd536bdcc3f8d2996a203dca96782beb6b62b8eb55c990282914e11b13a5"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/da374beaf4eaecbc7f88/visual.json",
+      "sha256": "5b9488f80bca370cc8067c4bf2ad3f5f31757afd6234d0162b2354e2dbb8f218"
+    },
+    {
+      "path": "powerbi/report/definition/pages/b48bf8ced055e9f97bbc/visuals/f60ac49f55c17b500bf1/visual.json",
+      "sha256": "a40482ce0c53f0a505967f2a4a08d84634e70ed05c97df0a7d44c48700ab603c"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/page.json",
+      "sha256": "929f089fdaa67b75d2b7b2ae2942e6d2e61876468f63a011e857337fd2cefec7"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/visuals/29885c553f4bf83786e9/visual.json",
+      "sha256": "bf8fb38413e3d29a43b04f2fd5c0562f66014a5929a2f5e4861d35268d91b15e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/visuals/75fbb740dbbd3d8f9a81/visual.json",
+      "sha256": "31712a971282e2e4071572d6b1f3d5350a3c1d41689aee395ee6c8317b00c7dd"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/visuals/7cf7e12608ab2596452e/visual.json",
+      "sha256": "6ae33e3bc11ef4e16c674ee98ad846909a78a85b88de0efc8cdd9bc7638a9135"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/visuals/8bb0c181ae3429719940/visual.json",
+      "sha256": "fee9e3a7dd0b8df3484c7132bf05b6f105f828c185aa0c87c6c66d579a10b3bc"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/visuals/8f3b4b5a958369b2a17f/visual.json",
+      "sha256": "71f071857ce4f658b383362a240cceb1b6f684b26e4125cde26710719eda3661"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_data/visuals/b9031536a1f3a1e94eec/visual.json",
+      "sha256": "48acd88462b34228d46691c982b738673389e62c05cc3a6cb7dae3de50acacef"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/page.json",
+      "sha256": "e203abf34e1185fc8128e3bf91b61196bada2339bd9c5fee3be019c9041acabc"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/340ed0badfcfdeba86eb/visual.json",
+      "sha256": "87d4bdebfde51429ca4fef37e0aa3949b1e99e0f000d2a2bb846e043f69fbca5"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/39ca10b72233730024bb/visual.json",
+      "sha256": "140521aebbfefe71cc02b8588c170529f0edad3169b04869dd4bb5d7eda1abb9"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/482650221d6cefd18f30/visual.json",
+      "sha256": "ba97fc6ab82e5e3394771d07cf46a460b92dad92d122b37ecdaad458051b49c1"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/4b3fd1adfbaf580d28ee/visual.json",
+      "sha256": "02a9f100748d84394065fe377da96d50b451a26e2131074d02d126a2d3032e59"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/58d1519a91de39e69e04/visual.json",
+      "sha256": "fe8c0fc5e12772eb5742b3059a133c39748bc138c5011fe092bab3b95b321e9c"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/5bab5563d24ee318f4bd/visual.json",
+      "sha256": "e9da3e5554d5e9f86d6f9f4ddf53e84b3ade96a575bcddaa6c4db81613791eea"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_decision/visuals/bbaec52dea1640718640/visual.json",
+      "sha256": "b205c5d19212f1c46f8e4b69204a2de4e852f1b49e720923c53b6696cffc301f"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/page.json",
+      "sha256": "d1d31dd31c75ef2e874784b8088f665db7e43f583f3e011f22c26ec4585e5a36"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/17832fe8daf6a5fbf9a6/visual.json",
+      "sha256": "41432565a17571a1e5fac4bd0752de444dd3b5fc2d058ab8e67bf2445dfebac1"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/493ffb37cd6d30ce2ae1/visual.json",
+      "sha256": "208cda786842c0bb2fc554597682869494ff6c10072c7cad7b44fc4c970ea01b"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/6829fb3606d442214050/visual.json",
+      "sha256": "f482bdabda23eeec0aa335f4543d8b33289897200cc6a6fea420be0807d8f102"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/a1292765870dfbb59f48/visual.json",
+      "sha256": "71b0bbc8150471514fbfc59f7532a1022d0a514db63ec1a6f1140d84cf0957f4"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/ad80be6ac134078e0484/visual.json",
+      "sha256": "26050267daf2a76ea04ea9b084229b603beb7a555e739e026fe807f57c9749ee"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/bf4eb185f00731126dfb/visual.json",
+      "sha256": "74b22b9b3caa2f7ce93d61aa11764b729fd4f8d8bafa3c169f865074de5bb4ac"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_evidence/visuals/eaa99f154f4f03802922/visual.json",
+      "sha256": "7448f635e5de0c824a6e21658d27987bb34c0ee9e029e2abf904f58e932c288e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/page.json",
+      "sha256": "e39fe8848a716167a917b690f3f0696ed718ae55c2683300f9860beef40e4e4c"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/00c6f5ebd41ae54122bd/visual.json",
+      "sha256": "ee67cb0383d08707cc99671a23adc2bfac011efcdadb024771caee6fdcc4d028"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/06f3ecddb7c7d285d60c/visual.json",
+      "sha256": "752d9345b0628589221b9978c71e88a85f524e8de54643bd540762eee48b7593"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/29a02e562c344d85bbe7/visual.json",
+      "sha256": "dfe1bad648eea74b1afe74e8b0c41c7b6ea4de189bba1f0390f2e803296c72b2"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/38ca1dcaa421cb2d2471/visual.json",
+      "sha256": "25723715ab154b5e4600550daaead52273cfe9710ef3c0fba66dac5fd5bf6729"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/49c06043e6eefc7ce8fd/visual.json",
+      "sha256": "da9f95cffc3273cb611003238a4ffcd2d590cb009bc1b954704b9121cb2a4b83"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/7fbed80838a325f5bb80/visual.json",
+      "sha256": "96f22fe19c35f832e0551d7e0f1223f824ef472d95d3cdfe98010c594adc9189"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/8a33a14cbd976b92c7ff/visual.json",
+      "sha256": "5b5bac484387caeb7e5bdf956f92e3e6ad441d1a2b8c990f2c40a51effa1aedc"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/c266ba910c233e0a125d/visual.json",
+      "sha256": "843192bea3b8eb83817f443dae439283749be92a99b5d70ea89dace34ccac48a"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/cb1298bb9840c655fa8a/visual.json",
+      "sha256": "980b4d8bd50346eebcb867e8a2b07bec82b6ccf4110a5cd7a0a8a9dfa3b5ce54"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/df8c523fd696e3376c67/visual.json",
+      "sha256": "1bb1290faefd959801330798042e9b837caefe1316caa501224f564210505cd0"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/e2f2a6a0ea018ae0dbc4/visual.json",
+      "sha256": "799a0467f22ae0aca7a23db9730f38adac3bead42787e0bf4bf31805295e714b"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/eaf2f7c58cdf15125598/visual.json",
+      "sha256": "d97ef6779ee095e3cf046ec343e604f82b46fd34a391037832a0102cce5201ad"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_finance/visuals/f40fe2bd049e5c30102a/visual.json",
+      "sha256": "6eccbcb1ef865c551cc8a5a934a51ed4afd27c1a4d662cfc3a8eacdec13721a6"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/page.json",
+      "sha256": "ee8eafedc35c358d33fd757b011b5269a9d38ac8a42afa1e47ee676a6d135159"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/visuals/84ed60007f6f77577be7/visual.json",
+      "sha256": "a86b10eda817b67b8bf59392c52c0aea696ee55414b28c3943345a6f247cf3f5"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/visuals/a67d66df1b696f57f8d5/visual.json",
+      "sha256": "a9ecc12473c5c5f4c5848e42b6b7e953da9ff1e2ee472166a1780bb6bcea8d76"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/visuals/b4330b46fa0eb35f5056/visual.json",
+      "sha256": "12a5e987c5876b023bc772e279df7696f33b413da62c9ddd869850ee1f663cba"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/visuals/e1e4bd439d95a25b4b4d/visual.json",
+      "sha256": "0ac0ba71614f129ca789a24af352217d7fe0cc4da6480cfc4d50086c0e942248"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/visuals/e8395ccb54051d1aeb91/visual.json",
+      "sha256": "52b2872c093df3365dd7190b78654816710925b995c4e9734f196ab853ca5e52"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_governance/visuals/f561ae78a6b70aaeb97b/visual.json",
+      "sha256": "542218120973c406ea60e6d3f0a07d77f8214316e0e50ff136da3d7e0e935b4d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/page.json",
+      "sha256": "efcaa6b6092b719f215863515448b2407bf50c25021efcd029594e607096dee6"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/02ac8c40352bb6ff870a/visual.json",
+      "sha256": "df5d9f5228f8cfb46f045076b23a8c479795b833b705096c7241cff345fe3d87"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/03ebda4df1149e7e6737/visual.json",
+      "sha256": "a0a856389fe616cf3efd685aa917a57edfe98e52a2afc216fa83dc0b2688df13"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/07c6e6ca5e348891f00d/visual.json",
+      "sha256": "670913e89d455d54ec9578c4a96a474e4eefa6a5286222e91476a88c9f1e0a63"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/28a8b655a445407993b6/visual.json",
+      "sha256": "b744f0318067880af3347028b00c96b1c0c2bc2e17f885471710a7e1263d5855"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/30fd07bd518db5e060eb/visual.json",
+      "sha256": "0135949de4fd4d4ea239a8ae67cc2716d21355cc5f56f6dc0702e03dcbe45c10"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/32e26b12d4bc81b69999/visual.json",
+      "sha256": "0c52ec78dbe6031cea29d38ab94cd750ebe542c92f7928645ac9e8915f22d6dc"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/3e7f11ab914dbcf3638f/visual.json",
+      "sha256": "3ad34b6d14d06b738b682db47183fdc22730556219a7db77508fef69284baaa2"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/411b234dd7ffa44d64f9/visual.json",
+      "sha256": "3de2cf02e2c6114453ea115d444ffb05cabf62f9f7c92e9658bec3cf5da99e19"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/482a141bb3704410b89d/visual.json",
+      "sha256": "3303ded17b369f18f0af5f2152436da363a2eea06b1e4f9f3e5f04b3e25a1b32"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/6823f3ae1fdde0e442ae/visual.json",
+      "sha256": "e131286dae75669b2c9af51e67657e50af866046e68a88b3268f0f29ac80b63d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/87391f4d5b89b6567318/visual.json",
+      "sha256": "955f059b03ba48a9b02302a4f709aedd76183565a58609c8bb8412e2f6111214"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/91fc547560540b3175b9/visual.json",
+      "sha256": "6f56540e994d768dd16fe40ca7aaed406a68dd1540194d714236e3a26a980da3"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/a60bc524f0a6e96ab763/visual.json",
+      "sha256": "96435744a2f0274f9e5de45856ecf713094bb09b97a4610ad516e9ae7ecde991"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_incidents/visuals/f37e4f167847f8bc9753/visual.json",
+      "sha256": "099ae300a2a0a775df0730dee865ab44b0c8a9ced4f39935f906bb353f6e5987"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/page.json",
+      "sha256": "74c804148c641817223320f97f6ac6fcde7e3c8d6674947dd4673a3e752a62b1"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/1725844f7cf9fc119d3b/visual.json",
+      "sha256": "719211e8d8887c133dc3b192a80ab1bf565f2288df581e1d0dbf7019a4f9a117"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/23363aba0b4b7ef7f980/visual.json",
+      "sha256": "296b241fe772eefea079b31bb0ed731399ff0afe6be0da6685a0d940cf8d8d8d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/3fbeedb03385ab2fca32/visual.json",
+      "sha256": "cc7502ccf14d7dc453fa15f4ba8a7ed449075c30e5f2d96fc1afa9cd380a91c4"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/54426ac6335b9afc0afe/visual.json",
+      "sha256": "1e8742ad25bd3bbbdf486c86089ae2b81da8bb1b7a527e90379beedd1d05b776"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/93789411fd1a9863b4b8/visual.json",
+      "sha256": "57dec4fb2142ba9d879adbdad767de73cde8c2bb51f9ce2b3956956a119a3134"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/a007c3ca2308c58231c2/visual.json",
+      "sha256": "3523ab617717696fe519f9daf1e2f506da77f6113667e13bc5ee9bae33301b74"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/a7202634e674a0402d9c/visual.json",
+      "sha256": "65bcbe3fe9dfb253a946c79ef6b1a507605bd5af1bc6e5055b3cf8ba1ad7f2d8"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/a836743ca3ea18543a23/visual.json",
+      "sha256": "fac094791f87a949a5c9eb33c38a8c7d24625338ad0a483f533246b2f586242a"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/b13e193c0f9144c584f3/visual.json",
+      "sha256": "5f1e7e7cbd41669718c9d47ec315d2fab818ad21b69caea41e4f9ba3dccd8562"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/b637feee7f4ff272413c/visual.json",
+      "sha256": "65e641b73282b117cfaf0d9b1c00ab32cb5b66218f7629cf9a5ccc9493efaa51"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/e9ae112e7d8c02e830b6/visual.json",
+      "sha256": "2315f2b2571607afb9ab18c3f1d0b649b162953eeff0da3cbc3194ccc244867b"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/efd295ed3878d4047ca7/visual.json",
+      "sha256": "98a7091a3191b69bb09d626b9722a5381f3296faf117c81cc6d09022590d2e35"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_operations/visuals/fec0fd58134b1d6af1f3/visual.json",
+      "sha256": "0cc6e256d8def2543a7c8cc1d7348531b2a15bb01d94a30530f5da7f69ff51b5"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/page.json",
+      "sha256": "9c50d6af647ce5e4731847cfc418cbceef2962ade95f96f237cf0119ecae1e00"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/0c8adaa5261fd1751ee2/visual.json",
+      "sha256": "049ba6ab53a81ce1cd37aa3830fdbae01e8f7253fba747d55d1053e8ed13946d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/0daa229648153a4eb646/visual.json",
+      "sha256": "ca257d211e01dade9b02413e235ca12eb5adba5f09e11d5b76c24b9b0d2ff282"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/3a21f9dccb2793d272c3/visual.json",
+      "sha256": "ae51f31e51089f0438c896fa68e3e99d4ed94817215c6013acde1043ba50e6b2"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/403dea7eea65d34e1ff6/visual.json",
+      "sha256": "780c28c0437641e2fe559f1cb95ea460390f116ced4ad9f4e866ba5e388d7ad8"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/44bdc9e56f9dfa7b7885/visual.json",
+      "sha256": "7e1119867089063506f00709b9ba0ae590b306e839c6cae69abcf1f624d9cce3"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/4b97be442fcff3e27d52/visual.json",
+      "sha256": "1bac6997c39181e6b2001124d88ef0d01449eb7924f69ea5ab72e931082a1c1f"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/50f994445ab694116402/visual.json",
+      "sha256": "04d2a4df2f9f69e0fbfdc0cf0252828e6f83eac0064f0b9b377817a39a1f4916"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/a4fb962cde770648c20e/visual.json",
+      "sha256": "70af78d423da310dddf9556d26896516e21f8569f637fa83ab63f7eef5aab834"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/bf25053d374117d471f5/visual.json",
+      "sha256": "ba1c9e8aad2393fa032882d2c6e243cfcc070a379cc3857b63d2207e4139994e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_pilot/visuals/f4f39ccf5be308deb8bd/visual.json",
+      "sha256": "64a61d9e5bd7521b0d2665eb6df1d5be3a4651b40f29f5a6d2d8327a5df1a273"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/page.json",
+      "sha256": "693e2d3e118b22f6d55f5ca00ea7328bae748da85c03f5091c9f8993c8b25b16"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/1f029e47b2a5de37b30b/visual.json",
+      "sha256": "8a1b5b1c92ffbcc614a7e40eaa77f42060cd79b8cca127f40fe9f82f3ffad0fa"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/28d6ed4527b2cdd1cecb/visual.json",
+      "sha256": "c425fcba6bc10a0f5e64329c5e30983311a333dd1b057d70078f37c15db5d37f"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/384997fccb08103a9fac/visual.json",
+      "sha256": "f2b48bcae6d54235f3703dadf324c554d1fa70d2d5c0f9e5dc4db9103f7ccde3"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/530f16a27476e8a40e25/visual.json",
+      "sha256": "b91c8fc5b1617eda0926345a175fda80905f97307c137437898476c2998c7374"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/56e43ef219ebe8dea478/visual.json",
+      "sha256": "a1e4ae3955aa27d27bf1e7ef1d48d5b8d8a9bbe91de8615f313b294d4e8c6f79"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/5a69a0ea9aceaa061d23/visual.json",
+      "sha256": "2230075cc4a6c40ba313af59f6c5082ffc4847c7dbbc9dff21d88436ae019b20"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/aa3d9bf29d90230ce049/visual.json",
+      "sha256": "72024aae657c4ec6efa78e44fd343ab84980993d0d5761f0ad127c9e2954b296"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/d4dfb71fd1dfc847b085/visual.json",
+      "sha256": "4c7156e0705628b72fdb634d2a38e67566e0e4cad3698f208de82440d58097d3"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/e6f0e58a5ddc1ad6c5ec/visual.json",
+      "sha256": "43390f2bbf7e76e54e0a0b8347614c6f8ba284699d1748285ed1e257c91f00dd"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_quality/visuals/f108ef7e33b52b094b27/visual.json",
+      "sha256": "19da8ae2193c45705bf9b0e7900ff23fb0574001dae4081d8dcd0ddb2c6c5933"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/page.json",
+      "sha256": "11cca7244289fbe88e91b90d5479530dd2150f44a2dbdf554111674314ac75b7"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/01995158fe304deb0b0f/visual.json",
+      "sha256": "3f61a5bc89bdff84ddd912ee05572d0eef2c17eb73477f67e9c5f276ff16cda8"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/12dab8c39936e9658b9f/visual.json",
+      "sha256": "d8cc71d76873fbdfe20ace8b5bc78a64c160f9aec36c2d7050b67609b2c7386c"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/27585921a790a7ff8f0a/visual.json",
+      "sha256": "3822817b50019c13289ee5a997dfff460bebdc466eda2f6291e7038ce532b2fe"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/2b0103b75ed2129d9e23/visual.json",
+      "sha256": "cb04ae329fa31bd78b19e88da7cd7a1a1c309fbce31c34e8b068d5db127e4373"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/35fb93f474bde810b1e8/visual.json",
+      "sha256": "30df9f2fd7e66c6b4408b3ee5d02411d098745e3809d0c276eaa7a936e45e01d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/388e9c080d24d4b29db4/visual.json",
+      "sha256": "a950a1e969c79175486dcfb8002d349e74152eb5688fe6b2e49d4d68e5d238ab"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/4fa12371655f11ae5c6f/visual.json",
+      "sha256": "8899fe133de5cfdcbf93128fb867487a842e9578621087fdf1bee043550f4bcd"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/51cc1cfd692efda6b9bb/visual.json",
+      "sha256": "c5ec954ef9fa5db2ea7b23589654c65a54c85d9d3034049f1c8dbd4659118da3"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/5500687c94a72a7cc9dd/visual.json",
+      "sha256": "7efd75acc6e692b536ae496e72cbde8d656939146c2faaf6d1afadc0a7f078a2"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/5d3952898a17dafb7259/visual.json",
+      "sha256": "b9120ba0043075eb28b8cb4a318098bc7d6decf051ff34b360279b9ffa64df91"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/712389c4c01ee10e9e0a/visual.json",
+      "sha256": "ed622b4b1310680c11d7c428a3a80d117af7eedb698eb24d4211561633e8832c"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/82ab6642441359ff9ec5/visual.json",
+      "sha256": "88425e7d2ed1e5c9490dfd2e8cfdc4f171be9c2bac3dabd1840228a907f3c56b"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/86c769dd12ce1dfe5b44/visual.json",
+      "sha256": "1385e5811404866c90e458cd9cc3fa873cfd9bf9335637749acf09f60528d0a1"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/bd0f38fccc53947a52a2/visual.json",
+      "sha256": "90dc418d665d02fa42df50e56c4e3dabce6c8c1accee0e3f157000bf8331836e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/d64a62dafefde6232cbb/visual.json",
+      "sha256": "47ba25b93f0ee0222af482ac87b1ebd8a7c1ce38302cd32552179d718bd78346"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/df6fd94db2e740bd6866/visual.json",
+      "sha256": "bb1b464f87f8c1de5f91fa9eb4dc1074b81c7b3381798e4242e5e7f3bbd0c29e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_scenarios/visuals/e3ba68643e164d98f654/visual.json",
+      "sha256": "03cce95550e5f4304799c3ef76f871f73585ba595089c8368b7459aebea9efa6"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/page.json",
+      "sha256": "f1a2b0f7b72c9b009993b48cf933f45366360e4fae3d0f02adb90d0751a8aad1"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/0e96798876cfa7bec6c1/visual.json",
+      "sha256": "a7245c356feea31fa5065814acef4a018e7f7d4edd402dd95442b8b4bff522a4"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/204b03cbcb5b5f1409ce/visual.json",
+      "sha256": "181e7b05ea33e29edccd365c5bc97a260fcca08a8ca274a764eeb072eb1c4e3a"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/38d0592f703ed185aa03/visual.json",
+      "sha256": "a9a04efea1d03eb18c4743cd1e79522a38b97411490652967dec2f9e78c0ed48"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/6950d53a4c578c23ad40/visual.json",
+      "sha256": "bd6e957ed4b9b7f3542cbff40b71b0808aab646f330f3c4d305ba08671b71901"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/8ebcb5370b313d5f9023/visual.json",
+      "sha256": "4725b6004fd0ae18fe02b11731b91a3fb7b0d38cc7f44bfbf2d8851be20b791e"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/9820479a1b2c862da967/visual.json",
+      "sha256": "2aa9786d9f668749c31e64f4a29ba74f2f915a269595d558e95094cdec991b01"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/c10758016dedae34b86e/visual.json",
+      "sha256": "8f2e8760530aec7cad2857fab33f8bedf887b5ad17036871215ded9f7d699949"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/c708982835322204d904/visual.json",
+      "sha256": "0e669bbdc1c2e5aeae5b15422838affe652b9338e19dac7e9ba3ca367f49799d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/c79df2d531cec2bed1ae/visual.json",
+      "sha256": "f45d5d12a78fa3dfcb2c43ea426f054c1a15191a29489cf781654f2dec73a036"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/d6dcae6abc4ed3cbee7c/visual.json",
+      "sha256": "a22d2379974383782eb153dcdb8970538ac23f9ac792f3c4d2d16377ef09440d"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/da7ac8e097ea13e2d945/visual.json",
+      "sha256": "6737d2be9c6cd95e3778bf1fc5170e4b7abb051fffbe33d5f930771c7c9d0612"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/e7f1957455b1905a7d56/visual.json",
+      "sha256": "8ea3b7ab2333113d281ed7735150765634954b8f25371bcc9d35fd5ba66144ba"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/e91fb823ff773eda9623/visual.json",
+      "sha256": "3ed120d4fd4e1d2fe7769dcd1f0d293b987ba1b5b0fea356e3303c482966e3fb"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/ef94b804b94c473edeab/visual.json",
+      "sha256": "1af7fb687cc1dacfc06a7ea9a4d93c9bfdaccac29023a65013fa9c3b8375eec3"
+    },
+    {
+      "path": "powerbi/report/definition/pages/hp_terminal/visuals/f6bbc9faccf926cb2ab5/visual.json",
+      "sha256": "aba60753b616ed7c9343564e5b4552a3ca8cc95dcd313a5afd9e899a47f2705a"
+    },
+    {
+      "path": "powerbi/report/definition/pages/pages.json",
+      "sha256": "1aefebe6269059081cd770fc3239df7e549a38dc9ce6b4cef79840292e249322"
+    },
+    {
+      "path": "powerbi/report/definition/report.json",
+      "sha256": "475d5a519580889dbba177babded52ab84763a360d8d238be5109b4f97017e5e"
+    },
+    {
+      "path": "powerbi/report/definition/version.json",
+      "sha256": "32bc72b8e7996a054f96e655c8dd8fda82e5f502532610b45bc21a18cffe30b6"
+    },
+    {
+      "path": "powerbi/report/definition.pbir",
+      "sha256": "df2f9e05cb7ee737a80e7c59c257ea436ada784ef630770d57b3fa34de4fb39a"
+    }
+  ]
+}

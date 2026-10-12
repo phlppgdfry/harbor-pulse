@@ -7,7 +7,7 @@
     "z": 123,
     "width": 512,
     "height": 116,
-    "tabOrder": 122
+    "tabOrder": 3
   },
   "visual": {
     "visualType": "cardVisual",
@@ -138,6 +138,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Pilot interval hoog. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

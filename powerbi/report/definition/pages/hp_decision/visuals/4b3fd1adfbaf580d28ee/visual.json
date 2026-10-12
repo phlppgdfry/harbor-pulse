@@ -7,7 +7,7 @@
     "z": 118,
     "width": 970,
     "height": 318,
-    "tabOrder": 117
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "tableEx",
@@ -261,6 +261,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Optie, ImplementatieEUR, JaarlijkseOpexEUR, NettoP10, NettoP50, NettoP90, KansPositief. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

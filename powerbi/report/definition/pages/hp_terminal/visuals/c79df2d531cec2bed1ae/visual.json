@@ -7,7 +7,7 @@
     "z": 59,
     "width": 562,
     "height": 240,
-    "tabOrder": 58
+    "tabOrder": 13
   },
   "visual": {
     "visualType": "tableEx",
@@ -216,6 +216,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Verblijftijd uur, Bezetting %, CO2 kg per voertuig. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

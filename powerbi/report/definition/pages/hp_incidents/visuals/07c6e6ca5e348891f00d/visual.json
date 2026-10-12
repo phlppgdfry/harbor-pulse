@@ -7,7 +7,7 @@
     "z": 61,
     "width": 370,
     "height": 116,
-    "tabOrder": 60
+    "tabOrder": 5
   },
   "visual": {
     "visualType": "cardVisual",
@@ -138,6 +138,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Incidentvoertuigen. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

@@ -7,7 +7,7 @@
     "z": 39,
     "width": 562,
     "height": 260,
-    "tabOrder": 38
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "tableEx",
@@ -233,6 +233,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Prioriteit, Aandachtscore, Verbeterpunt. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

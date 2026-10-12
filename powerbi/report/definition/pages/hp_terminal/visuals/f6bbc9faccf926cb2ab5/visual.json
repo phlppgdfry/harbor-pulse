@@ -7,7 +7,7 @@
     "z": 50,
     "width": 760,
     "height": 92,
-    "tabOrder": 49
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "cardVisual",
@@ -138,6 +138,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Gekozen terminal. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

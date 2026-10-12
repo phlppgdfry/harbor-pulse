@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "backup_captured": true,
+  "model_created": false,
+  "rollback_attempted": true,
+  "rollback_verified": true,
+  "error_type": "RuntimeError",
+  "finished_at": "2026-10-12T01:07:40.588310+00:00"
+}

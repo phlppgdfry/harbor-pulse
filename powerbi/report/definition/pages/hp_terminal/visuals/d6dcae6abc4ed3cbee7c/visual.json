@@ -7,7 +7,7 @@
     "z": 54,
     "width": 370,
     "height": 116,
-    "tabOrder": 53
+    "tabOrder": 8
   },
   "visual": {
     "visualType": "cardVisual",
@@ -138,6 +138,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Bezetting %. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

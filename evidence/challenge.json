@@ -1,0 +1,452 @@
+{
+  "synthetic": true,
+  "thresholds": {
+    "hour_value": 45,
+    "options": [
+      {
+        "option": "Dispatch / slots",
+        "saved_hours": 36691.0,
+        "annual_cost": 45000,
+        "implementation_cost": 35000,
+        "annual_break_even_fraction": 0.027254640102477447,
+        "year_one_break_even_fraction": 0.04845269351551546,
+        "maximum_annual_cost_at_10pct": 165109.50000000003,
+        "max_failure_probability_at_10pct": 0.7274535989752255,
+        "failure_adjusted_break_even": [
+          {
+            "failure_probability": 0,
+            "fraction": 0.027254640102477447
+          },
+          {
+            "failure_probability": 0.25,
+            "fraction": 0.0363395201366366
+          },
+          {
+            "failure_probability": 0.5,
+            "fraction": 0.054509280204954894
+          },
+          {
+            "failure_probability": 0.75,
+            "fraction": 0.10901856040990979
+          }
+        ]
+      },
+      {
+        "option": "Yard expansion",
+        "saved_hours": 4280.616666666667,
+        "annual_cost": 12000,
+        "implementation_cost": 90000,
+        "annual_break_even_fraction": 0.06229632023423416,
+        "year_one_break_even_fraction": 0.5295187219909904,
+        "maximum_annual_cost_at_10pct": 19262.775,
+        "max_failure_probability_at_10pct": 0.3770367976576584,
+        "failure_adjusted_break_even": [
+          {
+            "failure_probability": 0,
+            "fraction": 0.06229632023423416
+          },
+          {
+            "failure_probability": 0.25,
+            "fraction": 0.08306176031231222
+          },
+          {
+            "failure_probability": 0.5,
+            "fraction": 0.12459264046846832
+          },
+          {
+            "failure_probability": 0.75,
+            "fraction": 0.24918528093693665
+          }
+        ]
+      },
+      {
+        "option": "Additional staffing",
+        "saved_hours": 27518.25,
+        "annual_cost": 131400,
+        "implementation_cost": 8000,
+        "annual_break_even_fraction": 0.10611139879897886,
+        "year_one_break_even_fraction": 0.11257175793438091,
+        "maximum_annual_cost_at_10pct": 123832.12500000001,
+        "max_failure_probability_at_10pct": -0.0611139879897884,
+        "failure_adjusted_break_even": [
+          {
+            "failure_probability": 0,
+            "fraction": 0.10611139879897886
+          },
+          {
+            "failure_probability": 0.25,
+            "fraction": 0.14148186506530513
+          },
+          {
+            "failure_probability": 0.5,
+            "fraction": 0.21222279759795773
+          },
+          {
+            "failure_probability": 0.75,
+            "fraction": 0.42444559519591546
+          }
+        ]
+      }
+    ],
+    "crossovers": [
+      {
+        "options": [
+          "Dispatch / slots",
+          "Yard expansion"
+        ],
+        "fraction": 0.022626493669981276
+      },
+      {
+        "options": [
+          "Dispatch / slots",
+          "Additional staffing"
+        ],
+        "fraction": -0.2093156359870268
+      },
+      {
+        "options": [
+          "Yard expansion",
+          "Additional staffing"
+        ],
+        "fraction": 0.11418259748195816
+      }
+    ],
+    "rule": "Choose no implementation when all annual nets are <=0; first-year cash is a separate constraint.",
+    "risk_model": "Binary execution failure destroys gross benefit but still incurs all costs; invented expected-value scenario."
+  },
+  "dependence": {
+    "options": [
+      {
+        "option": "Dispatch / slots",
+        "draws": 600,
+        "independent": {
+          "p10": 57882.68338778708,
+          "p50": 127760.06815964142,
+          "p90": 205269.93401807046,
+          "positive_fraction": 1.0
+        },
+        "coupled": {
+          "p10": 59118.19490883864,
+          "p50": 131215.15806795593,
+          "p90": 199992.67039682856,
+          "positive_fraction": 1.0
+        },
+        "cost_time_correlation": 0.9877131343904846,
+        "independent_correlation": -0.014992127508399535
+      },
+      {
+        "option": "Yard expansion",
+        "draws": 600,
+        "independent": {
+          "p10": -3365.2671910188583,
+          "p50": 10059.861121556769,
+          "p90": 33564.87042908518,
+          "positive_fraction": 0.8166666666666667
+        },
+        "coupled": {
+          "p10": 1102.5223868084493,
+          "p50": 9846.907541442539,
+          "p90": 30106.234842240083,
+          "positive_fraction": 0.94
+        },
+        "cost_time_correlation": 0.9880640993080836,
+        "independent_correlation": -0.014326518813266784
+      },
+      {
+        "option": "Additional staffing",
+        "draws": 600,
+        "independent": {
+          "p10": -80352.3246261928,
+          "p50": -4521.321917996378,
+          "p90": 67742.37417003188,
+          "positive_fraction": 0.455
+        },
+        "coupled": {
+          "p10": -65057.32566022634,
+          "p50": -3260.287028227118,
+          "p90": 48688.978705736314,
+          "positive_fraction": 0.47333333333333333
+        },
+        "cost_time_correlation": 0.9893118035038757,
+        "independent_correlation": -0.007354661801872248
+      }
+    ],
+    "assumptions": "Same triangular time and uniform 0.5\u20131.5x cost marginals; positive rank dependence versus independent draws. Common 5\u201315% realizable fraction and EUR45/hour. Distributions are scenarios, not probabilities calibrated from operations."
+  },
+  "missingness": {
+    "truth": {
+      "vehicles": 366910,
+      "punctuality": 0.9712926875800605,
+      "delay": 16.91837971164591,
+      "dwell": 17.504882345366827,
+      "coverage": 0.994818892916519,
+      "occupancy": 0.654198874923782,
+      "margin": 0.3435558460879562
+    },
+    "scenarios": [
+      {
+        "mechanism": "random_terminal_days",
+        "removed_terminal_days": 219,
+        "observed_unit_coverage": 0.8008312665231255,
+        "linked_delay_mean": 16.890297890298232,
+        "linked_delay_bias": -0.02808182134767634,
+        "linked_dwell_mean": 17.50200079637073,
+        "linked_dwell_bias": -0.003250355137815575,
+        "dwell_identification_bounds_0_to_72h": [
+          14.016149464446324,
+          28.356298274781288
+        ]
+      },
+      {
+        "mechanism": "most_delayed_terminal_days",
+        "removed_terminal_days": 219,
+        "observed_unit_coverage": 0.8016107492300564,
+        "linked_delay_mean": 15.356295241041892,
+        "linked_delay_bias": -1.5620844706040167,
+        "linked_dwell_mean": 17.21530196961094,
+        "linked_dwell_bias": -0.28994918189760455,
+        "dwell_identification_bounds_0_to_72h": [
+          13.799971110081492,
+          28.08399716551743
+        ]
+      },
+      {
+        "mechanism": "longest_dwell_terminal_days",
+        "removed_terminal_days": 219,
+        "observed_unit_coverage": 0.8035567305333733,
+        "linked_delay_mean": 15.753517075768317,
+        "linked_delay_bias": -1.1648626358775918,
+        "linked_dwell_mean": 17.13298002598081,
+        "linked_dwell_bias": -0.37227112552773534,
+        "dwell_identification_bounds_0_to_72h": [
+          13.767321413970729,
+          27.911236815567854
+        ]
+      }
+    ],
+    "scope": "Synthetic loss of all departure links for selected terminal-days; daily batch-mean dwell is treated as invented full-data truth. Not a reconstruction of unrecorded real departures.",
+    "caution": "Delay is available from all arrivals; bias arises if analysts incorrectly restrict delay to matched departures. Dwell bounds assume 0\u201372 hours, an explicit unvalidated bound."
+  },
+  "periods": {
+    "windows": [
+      {
+        "window": "full_year",
+        "terminal_days": 1095,
+        "kpis": {
+          "vehicles": 366910,
+          "punctuality": 0.9712926875800605,
+          "delay": 16.91837971164591,
+          "dwell": 17.504882345366827,
+          "coverage": 0.994818892916519,
+          "occupancy": 0.654198874923782,
+          "margin": 0.3435558460879562
+        },
+        "dispatch_net_for_period": 120109.50000000003,
+        "incident_days": 14
+      },
+      {
+        "window": "without_incident",
+        "terminal_days": 1081,
+        "kpis": {
+          "vehicles": 362898,
+          "punctuality": 0.972237377996021,
+          "delay": 16.5644847863587,
+          "dwell": 17.37805858320061,
+          "coverage": 0.9948387701227343,
+          "occupancy": 0.6512941934844052,
+          "margin": 0.34467531917835986
+        },
+        "dispatch_net_for_period": 118304.10000000003,
+        "incident_days": 0
+      },
+      {
+        "window": "Q1",
+        "terminal_days": 270,
+        "kpis": {
+          "vehicles": 85844,
+          "punctuality": 0.9704696892036718,
+          "delay": 18.34104421974745,
+          "dwell": 17.62771986131284,
+          "coverage": 0.9945016541633661,
+          "occupancy": 0.6253373015873016,
+          "margin": 0.3456830751018848
+        },
+        "dispatch_net_for_period": 27533.909589041097,
+        "incident_days": 0
+      },
+      {
+        "window": "Q2",
+        "terminal_days": 273,
+        "kpis": {
+          "vehicles": 94223,
+          "punctuality": 0.9682773845027223,
+          "delay": 18.32755378198529,
+          "dwell": 17.928653087341367,
+          "coverage": 0.9951922566676926,
+          "occupancy": 0.6901490265203108,
+          "margin": 0.3408735023340932
+        },
+        "dispatch_net_for_period": 31181.17191780822,
+        "incident_days": 14
+      },
+      {
+        "window": "Q3",
+        "terminal_days": 276,
+        "kpis": {
+          "vehicles": 94402,
+          "punctuality": 0.9726065125738862,
+          "delay": 16.0451621787674,
+          "dwell": 17.295085092334233,
+          "coverage": 0.9946611300608038,
+          "occupancy": 0.6599475931677019,
+          "margin": 0.34428189066857245
+        },
+        "dispatch_net_for_period": 31138.434246575343,
+        "incident_days": 0
+      },
+      {
+        "window": "Q4",
+        "terminal_days": 276,
+        "kpis": {
+          "vehicles": 92441,
+          "punctuality": 0.9737886868380913,
+          "delay": 15.052645471165393,
+          "dwell": 17.172984375169893,
+          "coverage": 0.9948940405231445,
+          "occupancy": 0.6418478260869566,
+          "margin": 0.3435714664036543
+        },
+        "dispatch_net_for_period": 30255.984246575346,
+        "incident_days": 0
+      }
+    ],
+    "explanations": [
+      {
+        "explanation": "terminal_only",
+        "parameters": 3,
+        "q4_rmse": 4.132232630941595
+      },
+      {
+        "explanation": "load_and_weekday",
+        "parameters": 5,
+        "q4_rmse": 3.941883216744783
+      },
+      {
+        "explanation": "staffing_and_load",
+        "parameters": 6,
+        "q4_rmse": 4.054321342599264
+      },
+      {
+        "explanation": "including_incident",
+        "parameters": 7,
+        "q4_rmse": 3.564221451289541
+      }
+    ],
+    "caution": "Period costs prorated by observed calendar days; scale-down feasibility is unproven. Staffing may respond to congestion. Maintenance, weather, demand and management practices cannot be causally disentangled by this generator. Q4 has no maintenance incident."
+  },
+  "priority": {
+    "cases": 2187,
+    "rank_counts": {
+      "1": [
+        0,
+        972,
+        1215
+      ],
+      "2": [
+        2187,
+        0,
+        0
+      ],
+      "3": [
+        0,
+        1215,
+        972
+      ]
+    },
+    "rankings": {
+      "(2, 3, 1)": 1215,
+      "(2, 1, 3)": 972
+    },
+    "cases_with_ties": 0,
+    "weights": [
+      0.5,
+      1,
+      2
+    ],
+    "targets": {
+      "punctuality": [
+        0.95,
+        0.97,
+        0.99
+      ],
+      "occupancy": [
+        0.75,
+        0.85,
+        0.95
+      ],
+      "margin": [
+        0.3,
+        0.35,
+        0.4
+      ]
+    },
+    "rationale": "Reproduces DAX shortfall score: percentage-point gaps in punctuality, occupancy, planning and margin, equal weight by default. No empirical justification for equal weights or targets; use as triage, not causal priority. Ties ordered by terminal key for counting only."
+  },
+  "pilot_usefulness": {
+    "cases": [
+      {
+        "improvement_minutes": 1.5,
+        "normal_95_interval": [
+          0.912,
+          2.088
+        ],
+        "statistically_detectable": true,
+        "minimum_useful_effect_minutes": 3,
+        "minimum_effect_established": false,
+        "realizable_fraction": 0.1,
+        "annual_net": -3722.625,
+        "decision_ready": false
+      },
+      {
+        "improvement_minutes": 3,
+        "normal_95_interval": [
+          2.02,
+          3.98
+        ],
+        "statistically_detectable": true,
+        "minimum_useful_effect_minutes": 3,
+        "minimum_effect_established": false,
+        "realizable_fraction": 0,
+        "annual_net": -45000.0,
+        "decision_ready": false
+      },
+      {
+        "improvement_minutes": 6,
+        "normal_95_interval": [
+          4.04,
+          7.96
+        ],
+        "statistically_detectable": true,
+        "minimum_useful_effect_minutes": 3,
+        "minimum_effect_established": true,
+        "realizable_fraction": 0.1,
+        "annual_net": 120109.5,
+        "decision_ready": true
+      },
+      {
+        "improvement_minutes": 6,
+        "normal_95_interval": [
+          4.04,
+          7.96
+        ],
+        "statistically_detectable": true,
+        "minimum_useful_effect_minutes": 3,
+        "minimum_effect_established": true,
+        "realizable_fraction": 0.01,
+        "annual_net": -28489.05,
+        "decision_ready": false
+      }
+    ],
+    "rule": "Separate detectable improvement, lower confidence bound >=3 minutes, positive usable net value and operational guardrails. These examples are invented normal approximations, not a reanalysis of pilot data."
+  }
+}

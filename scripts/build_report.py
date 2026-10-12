@@ -1,4 +1,4 @@
-"""Generate a seven-page Power BI PBIR report entirely from source code."""
+"""Generate a twelve-page Power BI PBIR report entirely from source code."""
 
 import base64
 import hashlib
@@ -28,7 +28,7 @@ themefile = next(OUT.glob("StaticResources/RegisteredResources/*.json"))
 theme = json.loads(themefile.read_text())
 theme.update(
     name="Harbor Pulse · Maritime Intelligence",
-    dataColors=[TEAL, "#5064A0", "#E99A38", "#6E9A83", "#A66384", NAVY],
+    dataColors=[TEAL, "#5064A0", "#A85F0F", "#3F765A", "#88496A", NAVY],
     foreground=INK,
     background="#FFFFFF",
     tableAccent=TEAL,
@@ -777,6 +777,34 @@ save(
         "activePageName": pages[0][0],
     },
 )
+# Reading order follows the visible layout on each page; alt text describes
+# changing filters without claiming fixed values. Never encode meaning by color alone.
+for page_name, _ in pages:
+    ordered = sorted(
+        [v for p, v in visuals if p == page_name],
+        key=lambda v: (v["position"]["y"], v["position"]["x"]),
+    )
+    for order, v in enumerate(ordered):
+        v["position"]["tabOrder"] = order
+        fields = [
+            projection.get("nativeQueryRef", "")
+            for role in v["visual"].get("query", {}).get("queryState", {}).values()
+            for projection in role["projections"]
+        ]
+        description = (
+            (
+                "Current selection: "
+                + ", ".join(dict.fromkeys(fields))
+                + ". Synthetic portfolio data; inspect labels and values, not color alone."
+            )
+            if fields
+            else "Report explanation or navigation. Synthetic portfolio case; no realized business impact claimed."
+        )
+        v["visual"]["visualContainerObjects"]["general"] = obj(altText=lit(description[:250]))
+        if v["visual"]["visualType"] == "lineChart":
+            v["visual"].setdefault("objects", {})["lineStyles"] = obj(
+                showMarker=lit(True), showMarkerByDefault=lit(True), markerSize=lit(6)
+            )
 for p, v in visuals:
     save(OUT / f"definition/pages/{p}/visuals/{v['name']}/visual.json", v)
 model = (

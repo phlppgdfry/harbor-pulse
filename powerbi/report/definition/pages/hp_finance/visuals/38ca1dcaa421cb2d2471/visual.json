@@ -7,7 +7,7 @@
     "z": 74,
     "width": 562,
     "height": 286,
-    "tabOrder": 73
+    "tabOrder": 9
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -206,6 +206,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Brutomarge. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

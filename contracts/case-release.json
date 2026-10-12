@@ -1,0 +1,7 @@
+{
+  "case_version": "HP-2026.2",
+  "synthetic": true,
+  "metrics": {"vehicles":366910,"fact_rows":1095,"late_corrections":36,"duplicates":216,"source_fact_difference":0,"report_pages":12,"report_elements":132,"model_tables":13,"measures":56},
+  "recommendation": "Pilot dispatch first under invented assumptions; do not claim realized savings.",
+  "rls_viewer_status": "license-blocked"
+}

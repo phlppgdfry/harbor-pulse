@@ -58,3 +58,17 @@ test('two-minute video and captions are served locally', async ({ page, request 
   expect(captions.ok()).toBe(true);
   expect(await captions.text()).toMatch(/^WEBVTT/);
 });
+
+test('WCAG A/AA automated checks and useful keyboard focus', async ({ page }) => {
+  const AxeBuilder = require('@axe-core/playwright').default;
+  await page.goto('/');
+  await expect(page.locator('#recommendation')).toContainText('Under these assumptions:');
+  const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
+  expect(result.violations).toEqual([]);
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('link', { name: 'Skip to case content' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await page.locator('#fraction').focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator('#fraction')).toHaveAttribute('aria-valuetext', '12.5% realizable');
+});

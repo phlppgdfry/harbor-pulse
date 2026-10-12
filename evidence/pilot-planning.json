@@ -8,7 +8,7 @@
       "baseline_days": 14,
       "effect_minutes": 0,
       "rejection_rate": 0.065,
-      "mean_estimate": 0.008559340101658102
+      "mean_estimate": 0.008559340101658099
     },
     {
       "post_days": 14,
@@ -92,7 +92,7 @@
       "baseline_days": 14,
       "effect_minutes": 0,
       "rejection_rate": 0.053,
-      "mean_estimate": 0.0008952619580722635
+      "mean_estimate": 0.0008952619580722626
     },
     {
       "post_days": 56,

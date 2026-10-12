@@ -7,7 +7,7 @@
     "z": 92,
     "width": 1552,
     "height": 368,
-    "tabOrder": 91
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "tableEx",
@@ -278,6 +278,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Datum, Terminal, Voertuigen, Planning, Op tijd %, Vertraging min, Omzet. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

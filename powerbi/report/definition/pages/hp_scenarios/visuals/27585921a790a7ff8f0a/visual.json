@@ -7,7 +7,7 @@
     "z": 87,
     "width": 760,
     "height": 206,
-    "tabOrder": 86
+    "tabOrder": 14
   },
   "visual": {
     "visualType": "tableEx",
@@ -216,6 +216,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Bespaarde wachturen, Indicatieve besparing, Scenario voordeel per voertuig. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

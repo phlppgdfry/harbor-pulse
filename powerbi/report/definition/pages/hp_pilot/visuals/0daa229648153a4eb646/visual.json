@@ -7,7 +7,7 @@
     "z": 121,
     "width": 500,
     "height": 116,
-    "tabOrder": 120
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "cardVisual",
@@ -138,6 +138,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Pilot effect min. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

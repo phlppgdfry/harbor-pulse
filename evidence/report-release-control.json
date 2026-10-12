@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "backup_captured": true,
+  "model_created": false,
+  "rollback_attempted": false,
+  "rollback_verified": false,
+  "matched_definition_parts": 150,
+  "model_binding_preserved": true,
+  "finished_at": "2026-10-12T01:21:29.574896+00:00"
+}

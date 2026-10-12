@@ -7,7 +7,7 @@
     "z": 41,
     "width": 562,
     "height": 258,
-    "tabOrder": 40
+    "tabOrder": 12
   },
   "visual": {
     "visualType": "tableEx",
@@ -216,6 +216,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Status punctualiteit, Status marge, Status bezetting. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

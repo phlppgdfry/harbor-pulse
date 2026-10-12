@@ -1,0 +1,10 @@
+{
+  "scope": "Live isolated report copy; deliberately injected verification fault after actual update",
+  "model_created": false,
+  "production_modified": false,
+  "automatic_restore_verified": true,
+  "clone_deleted": true,
+  "status": "passed",
+  "production_unchanged": true,
+  "binding_restored": true
+}

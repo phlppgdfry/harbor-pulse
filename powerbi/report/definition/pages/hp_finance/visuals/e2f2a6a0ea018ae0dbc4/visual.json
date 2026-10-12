@@ -7,7 +7,7 @@
     "z": 24,
     "width": 362,
     "height": 66,
-    "tabOrder": 23
+    "tabOrder": 3
   },
   "visual": {
     "visualType": "slicer",
@@ -139,6 +139,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Maand. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

@@ -7,7 +7,7 @@
     "z": 67,
     "width": 970,
     "height": 202,
-    "tabOrder": 66
+    "tabOrder": 11
   },
   "visual": {
     "visualType": "tableEx",
@@ -278,6 +278,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Datum, Terminal, Incident, Voertuigen, Volumeverschil, Vertraging min, Bezetting %. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

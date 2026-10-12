@@ -1,0 +1,10 @@
+{
+  "description": "Three invented terminal-days; manually calculated, independent of the generator.",
+  "rows": [
+    {"Vehicles":10,"OnTimeVehicles":9,"DelayMinutes":0,"CompleteDepartureUnits":8,"DwellHours":2,"AvailableSlots":100,"OccupiedSlots":40,"Revenue":300,"HandlingCost":200},
+    {"Vehicles":30,"OnTimeVehicles":21,"DelayMinutes":20,"CompleteDepartureUnits":30,"DwellHours":4,"AvailableSlots":50,"OccupiedSlots":45,"Revenue":900,"HandlingCost":700},
+    {"Vehicles":20,"OnTimeVehicles":10,"DelayMinutes":40,"CompleteDepartureUnits":10,"DwellHours":8,"AvailableSlots":150,"OccupiedSlots":75,"Revenue":600,"HandlingCost":300}
+  ],
+  "expected": {"vehicles":60,"punctuality":0.6666666666666666,"delay":23.333333333333332,"dwell":4.5,"coverage":0.8,"occupancy":0.5333333333333333,"margin":0.3333333333333333},
+  "working": {"punctuality":"(9+21+10)/60","delay":"(10*0+30*20+20*40)/60","dwell":"(8*2+30*4+10*8)/48","coverage":"48/60","occupancy":"(40+45+75)/(100+50+150)","margin":"(1800-1200)/1800"}
+}

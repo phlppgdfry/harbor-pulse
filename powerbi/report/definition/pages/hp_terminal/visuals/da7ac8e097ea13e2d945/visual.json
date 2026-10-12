@@ -7,7 +7,7 @@
     "z": 57,
     "width": 562,
     "height": 222,
-    "tabOrder": 56
+    "tabOrder": 11
   },
   "visual": {
     "visualType": "tableEx",
@@ -231,6 +231,19 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current selection: Terminal, Regio, Voertuigen, Op tijd %, Marge %. Synthetic portfolio data; inspect labels and values, not color alone.'"
                 }
               }
             }

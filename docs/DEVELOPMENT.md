@@ -53,7 +53,7 @@ redacted. This is a detection control, not a guarantee that every possible secre
 ## What the coverage gate means
 
 Coverage includes statements **and branches** in `harbor_pulse` and
-`scripts.cloud_operations`, with a minimum combined score of 80%. HTML reports live in
+`scripts.cloud_operations`, `scripts.release_report`, `scripts.publish_powerbi` and `scripts.native_refresh`, with a minimum combined score of 80%. HTML reports live in
 `build/coverage/html/index.html`, XML in `build/coverage/coverage.xml`; CI uploads both.
 Tests, generated artifacts and unrelated publishing/rendering scripts are outside this
 scope. The gate does not assert 80% coverage of every cloud script.
@@ -94,3 +94,6 @@ and browser QA jobs on pushes, pull requests, manual runs and the weekly schedul
 The reproduction job validates the publication gate, native model, report schemas and
 reviewer SQL after linting/tests. Jobs have read-only repository permissions and need no
 cloud credentials. A successful check is evidence for that commit, not a timeless badge.
+
+
+HP-2026.2 adds `scripts/challenge_evidence.py`, `scripts/audit_case.py` and `scripts/check_clean_clone.py`. CI checks the committed artifact registry before evidence generators write new working outputs. A reviewer should run `uv run --locked python scripts/audit_case.py` after the fresh demo, before rebuilding tracked artifacts. Registering hashes is an explicit reviewed-release step. The expanded coverage scope now includes release, publication and refresh controls; its score is not directly comparable to the earlier narrower 94.4% measurement.

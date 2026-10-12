@@ -1,0 +1,113 @@
+{
+  "case_version": "HP-2026.2",
+  "checked_at": "2026-10-12T01:17:42.510Z",
+  "export_rounding": "Displayed whole-EUR values allowed 0.51 EUR rounding tolerance",
+  "status": "passed",
+  "scope": "Actual SDK filters, slicer states and rendered card exports; not mouse cross-highlighting or every visual",
+  "checks": [
+    {
+      "case": "empty-result",
+      "expected": 0,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "case": "multiple-terminals",
+      "expected": 283739,
+      "actual": 283739,
+      "passed": true
+    },
+    {
+      "case": "month-1",
+      "expected": 28212,
+      "actual": 28212,
+      "passed": true
+    },
+    {
+      "case": "month-2",
+      "expected": 26742,
+      "actual": 26742,
+      "passed": true
+    },
+    {
+      "case": "month-3",
+      "expected": 30890,
+      "actual": 30890,
+      "passed": true
+    },
+    {
+      "case": "month-4",
+      "expected": 30165,
+      "actual": 30165,
+      "passed": true
+    },
+    {
+      "case": "month-5",
+      "expected": 32202,
+      "actual": 32202,
+      "passed": true
+    },
+    {
+      "case": "month-6",
+      "expected": 31856,
+      "actual": 31856,
+      "passed": true
+    },
+    {
+      "case": "month-7",
+      "expected": 32792,
+      "actual": 32792,
+      "passed": true
+    },
+    {
+      "case": "month-8",
+      "expected": 31357,
+      "actual": 31357,
+      "passed": true
+    },
+    {
+      "case": "month-9",
+      "expected": 30253,
+      "actual": 30253,
+      "passed": true
+    },
+    {
+      "case": "month-10",
+      "expected": 30781,
+      "actual": 30781,
+      "passed": true
+    },
+    {
+      "case": "month-11",
+      "expected": 29892,
+      "actual": 29892,
+      "passed": true
+    },
+    {
+      "case": "month-12",
+      "expected": 31768,
+      "actual": 31768,
+      "passed": true
+    },
+    {
+      "case": "reset-all",
+      "expected": 366910,
+      "actual": 366910,
+      "passed": true
+    },
+    {
+      "case": "scenario-0",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "case": "scenario-20",
+      "expected": 1119643.6125000003,
+      "actual": 1119644,
+      "passed": true
+    }
+  ],
+  "filters_persisted": false,
+  "user_browser_controlled": false
+}
