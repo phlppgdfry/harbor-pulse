@@ -62,5 +62,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.parse_args()
     result = check()
+    (ROOT / "build").mkdir(exist_ok=True)
     (ROOT / "build/clean-clone.json").write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
