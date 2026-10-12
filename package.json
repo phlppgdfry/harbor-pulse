@@ -1,0 +1,15 @@
+{
+  "name": "harbor-pulse-reviewer-site",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Reproducible headless checks for the Harbor Pulse recruiter walkthrough",
+  "scripts": {
+    "test:web": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,63 @@
+[project]
+name = "harbor-pulse"
+version = "1.2.0"
+description = "Reproducible synthetic terminal analytics and Power BI portfolio case"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+report = [
+    "jsonschema>=4.23,<5",
+    "matplotlib>=3.9,<4",
+    "reportlab>=4.2,<5",
+]
+
+[dependency-groups]
+dev = [
+    "coverage[toml]>=7.6,<8",
+    "hypothesis>=6.100,<7",
+    "pre-commit>=4,<5",
+    "ruff>=0.14,<1",
+    "sqlfluff>=3,<5",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["build", "schemas", ".venv", "node_modules"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Repo-local executable scripts deliberately add the source tree before importing.
+"scripts/*.py" = ["E402"]
+
+[tool.coverage.run]
+branch = true
+source = ["harbor_pulse", "scripts.cloud_operations"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 80
+precision = 1
+
+[tool.coverage.html]
+directory = "build/coverage/html"
+
+[tool.coverage.xml]
+output = "build/coverage/coverage.xml"
+
+[tool.sqlfluff.core]
+dialect = "sqlite"
+max_line_length = 100
+exclude_rules = ["LT09"]
+
+[tool.sqlfluff.indentation]
+indent_unit = "space"
+tab_space_size = 4

@@ -116,17 +116,18 @@ It does **not** claim a real operational deployment, actual cost savings, valida
 ```bash
 git clone https://github.com/phlppgdfry/harbor-pulse.git
 cd harbor-pulse
-python -m unittest discover -s tests -v
-python -m harbor_pulse demo
-python scripts/check_evidence.py
-python -m harbor_pulse monitor
+uv sync --locked --extra report
+uv run --locked python -m unittest discover -s tests -v
+uv run --locked python -m harbor_pulse demo
+uv run --locked python scripts/check_evidence.py
+uv run --locked python -m harbor_pulse monitor
 ```
 
 Python 3.12+; the core pipeline and analyses use the standard library. No cloud account, database server or secrets are needed to reproduce the case. The demo writes generated sources, a SQLite warehouse, load logs and results under ignored `build/`. For a second independent replay demonstration, choose a fresh output directory: `python -m harbor_pulse demo --output build/another-run`.
 
 Additional reviewer evidence: `python scripts/review_evidence.py`.
 
-Optional report generation: install `requirements-report.txt`, then run `python scripts/build_report.py` and `python scripts/validate_report.py`. [Power BI publication instructions](docs/POWER-BI.md) require your own authorized Microsoft account.
+Optional report generation: the `--extra report` environment above includes the locked dependencies. Run `uv run --locked python scripts/build_report.py` and `uv run --locked python scripts/validate_report.py`. `requirements-report.txt` remains a legacy pip compatibility option. [Power BI publication instructions](docs/POWER-BI.md) require your own authorized Microsoft account.
 
 ## Repository map
 
@@ -144,3 +145,7 @@ build/        generated data, warehouse and private publication receipts (ignore
 ```
 
 Microsoft JSON schemas are included under their original license in `schemas/LICENSE`. Report geometry, cloud queries, definition read-back and actual pixel rendering are checked separately. [Native operations and remaining limits](docs/NATIVE-OPERATIONS.md).
+
+## Development quality
+
+Python dependencies are locked with uv; Ruff, branch coverage, Hypothesis, pre-commit, Gitleaks, SQLite SQLFluff and committed Playwright checks run locally and in CI. See [setup, commands and test boundaries](docs/DEVELOPMENT.md). Browser QA produces desktop/mobile screenshot artifacts without taking over a signed-in browser.

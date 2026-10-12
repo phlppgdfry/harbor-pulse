@@ -1,0 +1,30 @@
+repos:
+  - repo: local
+    hooks:
+      - id: uv-lock
+        name: Check locked Python dependencies
+        entry: uv lock --check
+        language: system
+        pass_filenames: false
+        files: ^(pyproject\.toml|uv\.lock)$
+      - id: ruff
+        name: Ruff lint
+        entry: uv run --locked --no-sync ruff check
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: Ruff format
+        entry: uv run --locked --no-sync ruff format --check
+        language: system
+        types: [python]
+      - id: sqlfluff
+        name: SQLFluff SQLite lint
+        entry: uv run --locked --no-sync sqlfluff lint
+        language: system
+        files: ^sql/.*\.sql$
+      - id: gitleaks
+        name: Gitleaks staged secret scan
+        entry: gitleaks git --pre-commit --staged --redact --no-banner
+        language: system
+        always_run: true
+        pass_filenames: false
