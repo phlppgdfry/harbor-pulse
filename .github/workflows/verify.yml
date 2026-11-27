@@ -9,7 +9,7 @@ permissions:
   contents: read
 jobs:
   reproduce:
-    runs-on: ubuntu-24.04  # pinned: Playwright can't install browsers on ubuntu-26.04 yet
+    runs-on: ubuntu-24.04 # pinned: Playwright can't install browsers on ubuntu-26.04 yet
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
@@ -50,7 +50,7 @@ jobs:
             build/run/pilot.json
           retention-days: 14
   clean-checkout:
-    runs-on: ubuntu-24.04  # pinned: Playwright can't install browsers on ubuntu-26.04 yet
+    runs-on: ubuntu-24.04 # pinned: Playwright can't install browsers on ubuntu-26.04 yet
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
@@ -64,7 +64,7 @@ jobs:
           path: build/clean-clone.json
           retention-days: 14
   secrets:
-    runs-on: ubuntu-24.04  # pinned: Playwright can't install browsers on ubuntu-26.04 yet
+    runs-on: ubuntu-24.04 # pinned: Playwright can't install browsers on ubuntu-26.04 yet
     steps:
       - uses: actions/checkout@v4
         with:
@@ -80,7 +80,7 @@ jobs:
           printf '%s\n' "$RUNNER_TEMP/gitleaks-bin" >> "$GITHUB_PATH"
       - run: gitleaks git --redact --no-banner
   website:
-    runs-on: ubuntu-24.04  # pinned: Playwright can't install browsers on ubuntu-26.04 yet
+    runs-on: ubuntu-24.04 # pinned: Playwright can't install browsers on ubuntu-26.04 yet
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
